@@ -1,0 +1,3 @@
+User-agent: *
+Host: http://mservice.pro
+Sitemap: http://mservice.pro/sitemap.xml

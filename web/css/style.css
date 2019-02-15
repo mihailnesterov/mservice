@@ -1,0 +1,948 @@
+﻿/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body	/* стили по умолчанию */
+{
+	font-family: 'Roboto', Verdana, Arial, sans-serif;
+	color: #4C4C4C;
+	font-weight: normal;
+	font-size: medium;	/* 14px */
+	background-color: #fff;
+}
+
+h1,h2,h3,h4 {
+	font-weight: 500;
+}
+
+h1 {
+	font-size: 1.8em;
+}
+
+h2 {
+	font-size: 1.6em;
+}
+h3 {
+	font-size: 1.4em;
+}
+h4 {
+	font-size: 1.2em;
+}
+
+
+a {
+	color: #6C6C6C;
+	text-decoration: none; /* убираем подчеркивание */
+}
+a:hover {
+	opacity: 0.8;
+	text-decoration: underline; /* при наведении - подчеркиваем */
+}
+
+/*#wrapper {
+	
+}*/
+
+/*header {
+	padding: 1em;
+}*/
+
+#page-header {
+	margin-top: 2em;
+}
+
+#top {
+	padding: 1em;
+}
+#top #top-left-block {
+	margin-top: 0.5em;
+}
+#top #top-left-block #slogan {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 1em 0;
+	line-height: 1.2;
+}
+#top #top-center-block {
+	margin-top: 1.5em;
+	display: inline-block;
+	vertical-align: middle;
+}
+#top #top-right-block {
+	padding: 0.5em 0;
+}
+#top #top-right-block ul {
+	display: inline-block;
+	vertical-align: middle;
+}
+#top #top-right-block ul li {
+	line-height: 1.4;
+	text-align: left;
+}
+#top #top-right-block ul li i {
+	font-size: 1.4em;
+	text-align: center;
+	width: 20px;
+	margin-right: 0.7em;
+	color: #01BF01;
+}
+#top #top-right-block ul .mailto i {
+	font-size: 1em;
+	text-align: center;
+	width: 20px;
+	margin-right: 1em;
+	color: #09d12a;
+}
+/* Главное меню */
+
+.navbar {	/* дорабатываем стили bootstrap */
+	border: 0;
+	padding: 0;
+	background-color: #09d12a;
+	border-width: 0 0 1px;
+	border-radius: 0;
+	margin: 0;
+}
+.navbar-header {
+	border: 0;
+}
+.navbar-header button {
+	border: 0;
+}
+.navbar-header button:hover,
+.navbar-header button:focus {
+	border: 0;
+	background-color: #09d12a !important;
+	opacity: 0.8;
+}
+.navbar-header button:focus {
+	border: 0;
+	background-color: #09d12a !important;
+}
+
+.navbar-header .icon-bar {
+	border: 1px #fff solid;
+	font-size: 2em;
+}
+.navbar-header .navbar-brand {
+	color: #fff;
+}
+#navbar,
+#navbar .navbar-nav {
+	border-width: 0 0 1px;
+	border-radius: 0;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	outline:0;
+}
+#navbar .navbar-nav .dropdown .dropdown-menu
+{ 
+	background-color: #09d12a !important;
+	
+}
+#navbar .navbar-nav .dropdown .dropdown-menu li a
+{
+	line-height: 2;
+}
+#navbar .navbar-nav .dropdown .dropdown-menu li a:hover
+{ 
+	background-color: #09d12a !important;
+	
+}
+#navbar .navbar-nav .dropdown:hover > .dropdown-menu
+{ 
+	display: block;	/* разворачиваем меню при наведении, а не клике */
+}
+
+#main-menu-container {
+	background-color: #09d12a;
+	color: #fff;
+}
+
+/*#main-menu {
+	
+}
+#main-menu ul {
+	
+}*/
+#main-menu ul li {
+
+	margin-top: 0.7em;
+	border-right: 1px #73A311 solid;
+}
+#main-menu ul li:last-child {
+	border-right: none;
+}
+#main-menu ul li a {
+	color: #fff;
+	padding: 0.2em 2em;
+	
+}
+
+/*main {
+	
+}*/
+
+#banner-on-main {
+	background: url('../images/bg.png');
+}
+#banner-on-main header {
+	padding: 6em 1em 8em 1em;
+}
+#banner-on-main h1{
+	color: #fff;
+	font-size: 3em;
+        padding: 1em 0;
+}
+
+/* заказ услуг */
+#order {
+	border: 1px #eee solid;
+	background-color: #f0f0f0;
+	padding: 2em;
+	margin: 2em 0;
+}
+#order .tab-content {
+	padding: 0;
+}
+
+/*#order .tab-content #regions {
+	
+}*/
+#order .tab-content #regions h2 {
+	font-size: 3em;
+	text-align: center;
+}
+#order .tab-content #regions #step1 {
+	padding: 1em;
+	font-size: 2em;
+	line-height: 3;
+	display: table;
+	margin: 0 auto;
+}
+#order .tab-content #regions #step1 label input {
+	margin-top: 1.3em;
+}
+#order .scan img {
+	padding: 0.5em 0;
+}
+
+.btn-navigate {
+	width: 50%;
+}
+
+.service-block .panel-group .panel {
+	padding: 1em;
+}
+
+/* cart */
+#cart-container {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: none;
+}
+#cart {
+	background-color: #fff;
+	border: 5px #c0c0c0 solid;
+	border-bottom: 0;
+	padding: 2em;
+}
+
+#cart-list {
+	list-style-type: decimal;
+	font-size: 1.2em;
+	margin-left: 2em;
+}
+#cart-list i {
+	color: #D9534F;
+	font-size: 1.2em;
+	cursor: pointer;
+}
+
+#sum-block {
+	font-size: 1.8em;
+	padding: 0.2em 0.5em;
+	border: 2px #eee solid;
+	margin-right: 0.5em;
+	display: inline-block;
+	vertical-align: middle;
+}
+#btn-order-block {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* блок экспертность - опыт - надежность на главной */
+.advance {
+	display: inline-block;
+	margin-top: 3em;
+}
+.advance-block {
+	margin: 1em;
+}
+.advance-header {
+	text-align: center;
+	margin-bottom: 1em;
+	margin-top: 1em;
+	height: 50px;
+}
+.advance-header img, 
+.advance-header h2 {
+	display: inline-block;
+	vertical-align: top;
+}
+.advance-header h2 {
+	padding: 0.1em 0.5em;
+}
+.advance-block p {
+	text-align: center;
+	line-height: 1.4;
+	padding: 0 1em 1em 1em;
+}
+
+#about-on-main {
+	padding: 1em;
+}
+#about-on-main-left {
+	padding: 2.5em 3em 2em 2em;
+	text-align: right;
+}
+.img-block-left {
+	display: block;
+}
+#about-on-main-left img {
+	padding: 2em 0;
+}
+#about-on-main-left p {
+	margin-bottom: 1em;
+	line-height: 2;
+}
+#about-on-main-left a {
+	background-color: #F1E9DB;
+	padding: 0.8em 1.5em;
+	border: 1px #6C6C6C solid;
+	border-radius: 8px;
+	display: inline-block;
+	margin-top: 0.5em;
+}
+#about-on-main-left a:hover {
+	text-decoration: none;
+}
+
+#about-on-main-right {
+	padding: 1em;
+	padding-top: 0.5em;
+}
+
+.about-services {
+	margin-bottom: 0.5em;
+	padding: 0.7em 1.8em;
+	/*border: 1px #F1E9DB solid;*/
+}
+
+.about-services .img-block,
+.about-services .text-block {
+	display: inline-block;
+	vertical-align: top;
+	/*transform: translateY(10%);
+	top: 10%;*/
+}
+.about-services .img-block {
+	background-color: #F1E9DB;
+	border-radius: 100px;
+	border: 1px #F1E9DB solid;
+	padding: 1.4em 1.5em;
+	/*margin-left: 0.4em;*/
+	/*margin-right: 1em;*/
+	text-align: center;
+}
+.about-services .img-block img {
+	width: 38px;
+	height: 38px;
+}
+/*.about-services .text-block {
+	width: 75%;
+}*/
+.about-services .text-block h3 {
+	font-size: 1.3em;
+	text-transform: uppercase;
+	font-weight: 500;
+	margin-bottom: 0.5em;
+	line-height: 1.2;
+}
+.about-services .text-block p {
+	line-height: 1.3;
+}
+
+#order-select-services {
+	background-color: #fff;
+	padding: 2em;
+}
+#order-select-services .panel-heading {
+	padding: 1em;
+}
+#order-select-services .panel-heading h4 a {
+	font-size: 1.4em;
+}
+#order-select-services .panel-body p {
+	line-height: 1.2;
+}
+#order-select-services .panel-body h4 {
+	margin: 1em 0;
+}
+#order-select-services .select-price {
+	margin-top: 0.3em;
+}
+.service-block {
+	padding: 1em 2em;
+}
+
+#order-payment {
+	background-color: #fff;
+	padding: 2em;
+}
+#order-payment .panel-heading {
+	padding: 1em;
+}
+#order-payment table {
+	font-size: 1.2em;
+}
+#order-payment .step3-sum {
+	font-weight: 500;
+	font-size: 1.4em;
+}
+#order-payment form input[type="text"],
+#order-payment form input[type="date"],
+#order-payment form input[type="email"]{
+	/*min-width: 350px;*/
+        min-width: 400px;
+        width: 100%;
+}
+#order-payment form .input-group-addon {
+	width: 60px;
+}
+
+#recommended {
+	background-color: #fff;
+	padding: 2em;
+	margin: 2em;
+}
+#recommended .recommended-block {
+	padding: 2em;
+}
+#recommended .recommended-block h3 {
+	background-color: #f0f0f0;
+	padding: 0.8em 0.5em;
+	border: 1px #e0e0e0 solid;
+	border-bottom: 0;
+}
+#recommended table th {
+	background-color: #f7f7f7;
+	font-weight: 600;
+	text-align: center;
+}
+#recommended table td {
+	vertical-align: middle;
+}
+
+#recommended table td .checkbox {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 1em;
+}
+#recommended table .check-sum {
+	text-align: center;
+	font-size: 1.2em;
+	vertical-align: middle;
+}
+#recommended table .check-sum-total {
+	font-size: 1.4em;
+	vertical-align: middle;
+	font-weight: 600;
+}
+#recommended .check-order-btn-block {
+	margin-top: -1em; 
+	padding: 0.5em 0;
+}
+#recommended .check-order-btn-block p {
+	margin-bottom: 1em;
+        font-size: 1.2em;
+}
+#recommended .check-order-btn-block .btn {
+	width: 180px;
+}
+#recommended #selected-complex {
+	border: 1px #f0f0f0 solid;
+	background-color: #f9f9f9;
+	padding: 2em 1em;
+	margin: 2em 0;
+}
+#recommended #selected-complex h4 span {
+	font-size: 1.4em;
+}
+#recommended form input[type="text"],
+#recommended form input[type="date"],
+#recommended form input[type="email"] {
+	min-width: 400px;
+        width: 100%;
+}
+#recommended form .input-group-addon {
+	width: 60px;
+}
+#recommended #go-recommended-checks {
+	display: block;
+	margin-bottom: 2em;
+}
+/* меню комплексных проверок */
+#recommended-menu {
+	position: fixed; 
+	top:1em;
+	right:0.8em; 
+	border: 2px #f0f0f0 solid;
+	background-color: #f9f9f9;
+	padding: 1em;
+}
+#recommended-menu ol {
+	list-style-type: decimal;
+	margin-left: 1em;
+}
+#recommended-menu ol li {
+	line-height: 2.5;
+}
+/* кнопка заказать комплексную проверку */
+#recommended-order {
+	position: fixed;
+	transform: translateY(40%);
+	top: 40%;
+	/*top:1em;*/
+	right:0.8em;
+	max-width: 300px;
+	height: auto;
+	border: 2px #f0f0f0 solid;
+	background-color: #f9f9f9;
+	padding: 2em 1em;
+}
+#recommended-order p {
+	padding: 0;
+	font-size: 1.2em;
+	margin-bottom: 1em;
+	line-height: 1.2;
+}
+#recommended-order a {
+	display: inline-block;
+	background-color: #F0AD4E;
+	color: #fff;
+	padding: 1em 1.7em;
+	font-size: 1.2em;
+}
+#recommended-order a:hover {
+	text-decoration: none;
+}
+#recommended-order a i {
+	margin-right: 0.5em;
+	font-size: 1.1em;
+}
+
+/* Подсказки 3-х шагов при выборе услуги  */
+.relative {
+	position: relative;
+}
+.order-steps-left {
+	position: absolute;
+	top:0;
+	left:0;
+	margin: 0;
+	z-index: 999;
+}
+.order-steps-right {
+	position: absolute;
+	top:0;
+	right:0;
+	margin: 0;
+	z-index: 999;
+}
+.order-steps-left p,
+.order-steps-right p {
+	/*background-color: #A0A0A0;*/
+	background-color: #34AD00;
+	background-color: #F1E9DB;
+	/*border: 3px #fff solid;*/
+	/*background-color: #09d12a;*/
+	/*color: #fff;*/
+	padding: 1.6em 0.7em;
+	font-size: 0.9em;
+	display: inline-block;
+	border-radius: 100px;
+}
+#order-steps #order-steps-1 {
+	background-color: #34AD00;
+	background-color: #F1E9DB;
+}
+
+#table-order-step3 td .fa-close {
+	color: #D9534F;
+	font-size: 1.2em;
+	cursor: pointer;
+}
+
+#services-checks-regions label,
+#recommended-checks-regions label {
+	border: 1px #d0d0d0 solid;
+	transition: .3s;
+}
+#services-checks-regions label:hover,
+#recommended-checks-regions label:hover {
+	opacity: 0.9;
+}
+#services-checks-regions .active,
+#recommended-checks-regions .active {
+	background-color: #F0AD4E;
+	border: 1px #F0AD4E solid;
+	color: #fff;
+}
+
+/* our clients on main */
+#our-clients-on-main {
+	margin-top: 4em;
+	margin-bottom: 4em;
+}
+#our-clients-on-main ul li {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 1em;
+}
+#our-clients-on-main ul li img:hover {
+	opacity: 0.8;
+}
+
+/* about page */
+
+#contacts-in-about {
+	display: inline-block;
+	vertical-align: middle;
+}
+#contacts-in-about ul {
+	list-style-type: none;
+}
+#contacts-in-about ul li {
+	line-height: 1.8;
+}
+#contacts-in-about ul li i {
+	font-size: 1.4em;
+	text-align: center;
+	width: 20px;
+	margin-right: 0.7em;
+	color: #01BF01;
+}
+#contacts-in-about ul .mailto i {
+	font-size: 1em;
+	text-align: center;
+	width: 20px;
+	margin-right: 1em;
+	padding: 0.3em 0 0.2em 0;
+	color: #09d12a;
+}
+
+/* contacts page */
+/*#contacts-in-contacts {
+
+}*/
+#contacts-in-contacts ul {
+	display: inline-block;
+	vertical-align: middle;
+}
+#contacts-in-contacts ul li {
+	font-size: 1.4em;
+	line-height: 1.8;
+	text-align: left;
+}
+#contacts-in-contacts ul li i {
+	font-size: 1.4em;
+	text-align: center;
+	width: 20px;
+	margin-right: 0.7em;
+	color: #01BF01;
+}
+#contacts-in-contacts ul .mailto i {
+	font-size: 1em;
+	text-align: center;
+	width: 20px;
+	margin-right: 1em;
+	padding: 0.3em 0 0.2em 0;
+	color: #09d12a;
+}
+
+/*aside {
+	
+}*/
+
+/* subscribe form */
+
+#subscribe-container {
+	background-color: #09d12a;
+}
+
+#subscribe-container #subscribe {
+	color: #fff;
+	padding: 1.5em;
+}
+
+#subscribe-container #subscribe h3 {
+        margin-top: 1em;
+        /*transform: translateY(50%);
+        top: 50%;*/
+        text-transform: uppercase;
+}
+
+#subscribe-container #subscribe h3 i {
+	margin-right: 0.5em;
+        font-size: 1.3em;
+}
+
+#subscribe-container #subscribe p {
+        /*transform: translateY(120%);
+        top: 0;*/
+        margin-top: 2em;
+        margin-bottom: 1em;
+}
+
+#subscribe-container #subscribe p i {
+        margin-left: 0.5em;
+}
+
+#subscribe-container #subscribe-form {
+        /*transform: translateY(20%);
+        top: 0;*/
+		margin-top: 1.1em;
+}
+#subscribe-container #subscribe-form input {
+	border: 1px #fff solid;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+#subscribe-container #subscribe-form .input-group-addon {
+	background-color: #F0AD4E;
+	border: 1px #F0AD4E solid;
+}
+#subscribe-container #subscribe-form .input-group-addon:hover {
+	border: 1px #F0AD4E solid;
+	cursor: pointer;
+}
+#subscribe-container #subscribe-form button {
+        border: 0;
+        padding: 0;
+		margin: 0;
+		font-size: 2em;
+		background: none;
+		color: #fff;
+}
+
+/* content-block */
+
+.content-block {
+    border: 1px #e9e9e9 solid;
+    padding: 2em;
+    line-height: 1.6;
+    margin-top: 0em;
+    margin-bottom: 2em;
+    /*background-color: #fafafa;*/
+}
+
+.content-block p {
+    margin-bottom: 1em;
+}
+
+.content-block h2,
+.content-block h3 {
+    margin-bottom: 1em;
+}
+
+.content-block ul {
+    list-style-type: disc;
+    margin-left: 1em;
+}
+
+.content-block ol {
+    list-style-type: decimal;
+    margin-left: 1em;
+}
+
+.content-block ul li,
+.content-block ol li {
+    line-height: 2.5;
+}
+
+/* map */
+#map {
+	padding: 2em 1em;
+}
+
+/* breadcrumbs */
+
+#breadcrumbs-container {
+    margin-top: 2em;
+}
+#breadcrumbs-container .breadcrumb {
+    padding: 1em;
+}
+
+/* footer */
+
+footer {
+	background-color: #1A1A1A;
+	color: #B2B2B2;
+}
+footer .footer-block {
+	padding: 2em;
+}
+footer .footer-block h4 {
+	margin-bottom: 1em;
+}
+/*footer .footer-block ul {
+	line-height: 1.8;
+}*/
+footer .footer-block ul li {
+	line-height: 2;
+}
+footer .footer-block ul li a:hover {
+	color: #c0c0c0;
+}
+footer .footer-block ul li i {
+	font-size: 1.2em;
+	text-align: center;
+	width: 20px;
+	margin-right: 1em;
+	/*color: #09d12a;*/
+	color: #5BB112;
+	/*color: #F0AD4E;*/
+}
+footer #copyright {
+	font-size: 0.8em;
+	line-height: 1.4;
+	padding-top: 1.5em;
+}
+footer #copyright a {
+	color: #5BB112;
+}
+
+
+/*Кнопка Наверх*/
+#toTop 
+{
+	width:1.9em;
+	/*background-color: #5BB112;
+	background-color: rgba(91,177,18,0.8);
+	background-color: #09d12a;*/
+	background-color: #F0AD4E;
+	text-align:center;
+	padding:0.4em 0.2em 0.5em 0.2em;
+	position:fixed;
+	bottom:0.7em;
+	right:1em;
+	cursor:pointer;
+	display:none;
+	color:#fff;
+	font-size:1.7em;
+	opacity: 0.95;
+	
+	-webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+
+#toTop:hover
+{
+	opacity: 0.8;
+}
+
+/* media */
+
+@media (max-width:1199px) { /* ноутбуки и средние экраны */
+	
+}
+
+@media (max-width:991px) { /* планшеты */
+    #order-payment form input[type="text"],
+    #order-payment form input[type="date"],
+    #order-payment form input[type="email"] {
+        min-width: 100%;
+        width: 100%;
+    }
+    #order-payment form .input-group-addon {
+        width: 70px;
+    }
+    #recommended form input[type="text"],
+    #recommended form input[type="date"],
+    #recommended form input[type="email"] {
+        min-width: 100%;
+        width: 100%;
+    }
+    #recommended form .input-group-addon {
+        width: 70px;
+	}
+	#about-on-main-left {
+		padding: 1em 2em 3em 1em;
+		text-align: left;
+	}
+}
+
+@media (max-width:767px) {	/* смартфоны */
+    #banner-on-main h1{
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width:543px) {	/* самые маленькие */
+    #banner-on-main h1{
+        font-size: 2em;
+    }
+}
