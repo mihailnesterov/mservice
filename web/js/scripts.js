@@ -678,18 +678,15 @@
             switch (parseInt(pageId[1])) {
                 case 1:
                     var p = 'Комплекс для ипотечной сделки';
-                    var complexID = 7;
-                    setBanner(p, complexID);
+                    setBanner(p, 7);
                     break;
                 case 5:
                     var p = 'Комплекс экспресс-проверка объекта';
-                    var complexID = 1;
-                    setBanner(p, complexID);
+                    setBanner(p, 1);
                     break;
                 default:
                     var p = 'Комплексная экспресс-проверка объекта';
-                    var complexID = 1;
-                    setBanner(p, complexID);
+                    setBanner(p, 1);
             }
         }
         
