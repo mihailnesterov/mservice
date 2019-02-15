@@ -439,7 +439,7 @@ use yii\helpers\Html;
             </div> <!-- end row -->
     </div> <!-- end container -->
 
-    <div id="recommended-order" class="hidden-xs hidden-sm animated bounceInRight text-center">
+    <div id="recommended-order-banner" class="hidden-xs hidden-sm animated bounceInRight text-center">
             <p>Комплексная проверка объекта недвижимости</p>
             <?= Html::a('<i class="fa fa-arrow-circle-right"></i> Заказать', '@web/complexes') ?>
     </div>

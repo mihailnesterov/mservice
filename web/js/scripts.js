@@ -662,3 +662,35 @@
         'showImageNumberLabel': false
         });
     });
+
+    // показываем индивидуальный комплекс для каждой услуги
+    $(function () {
+        var url = window.location.href;
+        var services = url.split('/services');
+        var pageId = url.split('=');
+        if(services[1] && pageId[1]) {
+            //alert(pageId[1]);
+            function setBanner(p, complexID) {
+                var banner = $('#recommended-order-banner');
+                banner.find('p').html(p);
+                banner.find('a').attr('href','complex?id=' + complexID);
+            }
+            switch (parseInt(pageId[1])) {
+                case 1:
+                    var p = 'Комплекс для ипотечной сделки';
+                    var complexID = 7;
+                    setBanner(p, complexID);
+                    break;
+                case 5:
+                    var p = 'Комплекс экспресс-проверка объекта';
+                    var complexID = 1;
+                    setBanner(p, complexID);
+                    break;
+                default:
+                    var p = 'Комплексная экспресс-проверка объекта';
+                    var complexID = 1;
+                    setBanner(p, complexID);
+            }
+        }
+        
+    });
