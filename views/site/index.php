@@ -202,7 +202,7 @@ use yii\helpers\Html;
                                         </div>	<!-- end panel-group -->
                                         
 
-                                        <h2 class="text-center">Как с вами связаться:</h2>
+                                        <h2 class="text-center">Как с Вами связаться:</h2>
                                         <hr>
                                         <div class="row">
                                         <form>
@@ -291,7 +291,7 @@ use yii\helpers\Html;
                                 открытому подходу к решению новых задач,<br>
                                 услуги MService становятся более<br>
                                 оптимизированными, исходя из потребностей<br>
-                                наших клиентов и особенностей российских<br>
+                                наших клиентов и особенностей российского<br>
                                 рынка недвижимости
                                 </p>
 
@@ -448,11 +448,6 @@ use yii\helpers\Html;
         // subscribe form
         
         $subscribe = new \app\models\Subscribe();
-        /*if ($subscribe->load(Yii::$app->request->post()) && $subscribe->validate()) {
-            if ($subscribe->save()) {
-                return true;
-            }
-        }*/
         if(Yii::$app->request->post('subscribe-field')){
                 $subscribe->email = Yii::$app->request->post('subscribe-field');
                 $subscribe->save();

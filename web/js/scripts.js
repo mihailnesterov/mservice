@@ -533,13 +533,20 @@
         добавляем им атрибут (attr) id.
         Увеличиваем счетчик ++
     */
+   $(function () {
+        var recommendedBlockCount = 1;
+        $('.recommended-block').each(function(){
+            $(this).attr('id','recommended-block' + recommendedBlockCount);
+            recommendedBlockCount++;
+        });
+    });
     $(document).ready(function () {
         var mainID = $('main').attr('page-id');
         if(mainID === 'complex'){
             $('#recommended-menu').removeClass('hidden');
-            var recommendedBlockCount = 1;
+            //var recommendedBlockCount = 1;
             $('.recommended-block').each(function(){
-                $(this).attr('id','recommended-block' + recommendedBlockCount);
+                //$(this).attr('id','recommended-block' + recommendedBlockCount);
                 $('#recommended-menu').find('ol').append('<li>'
                         + '<a href="' + document.location.href + '#' + $(this).attr('id') 
                         + '" class="scrolling-links">' 
@@ -547,7 +554,7 @@
                         //+ '<span class="comment" style="font-size: 0.8em; width: 50%;">' + $(this).find('.check-order-btn-block p').html() + '</span>'
                         + '</li>'
                 );
-                recommendedBlockCount++;
+                //recommendedBlockCount++;
             });
         }
     });
@@ -673,7 +680,7 @@
             function setBanner(p, complexID) {
                 var banner = $('#recommended-order-banner');
                 banner.find('p').html(p);
-                banner.find('a').attr('href','complex?id=' + complexID);
+                banner.find('a').attr('href','complexes#recommended-block' + complexID);
             }
             switch (parseInt(pageId[1])) {
                 case 1:

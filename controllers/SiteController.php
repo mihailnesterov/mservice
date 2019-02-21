@@ -270,7 +270,7 @@ class SiteController extends Controller
         ]);
     }
     
-    public function actionComplex($id)
+    public function actionComplex1($id)
     {
         $model = $this->findComplexModel($id);
         $regions = Regions::find()->orderby(['id'=>SORT_ASC])->limit(2)->all();

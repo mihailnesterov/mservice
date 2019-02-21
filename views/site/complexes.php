@@ -78,7 +78,7 @@ use yii\widgets\ActiveForm;
                                     <?php endforeach ?>
 
                                     <div id="recommended-order-block" class="hidden">                                                          
-                                        <h2 class="text-center">Как с вами связаться:</h2>
+                                        <h2 class="text-center">Как с Вами связаться:</h2>
                                         <hr>                                        
                                             <div class="row">
 

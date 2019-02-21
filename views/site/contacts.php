@@ -47,7 +47,10 @@ $company = Yii::$app->controller->getCompany('company');
                 </div> <!-- end col -->
             </div> <!-- end row -->
     </div> <!-- end container -->
-
+    <div id="recommended-order-banner" class="hidden-xs hidden-sm animated bounceInRight text-center">
+        <p>Комплексная проверка объекта недвижимости</p>
+        <?= Html::a('<i class="fa fa-arrow-circle-right"></i> Заказать', '@web/complexes') ?>
+    </div>
     <?php
         // subscribe form
         $subscribe = new \app\models\Subscribe();

@@ -1,5 +1,6 @@
 <?php
-    use yii\helpers\Html;
+	use yii\helpers\Html;
+	use yii\helpers\Url;
     use app\assets\AppAsset;
     
     $directoryAsset = Yii::$app->assetManager->getPublishedUrl(Yii::$app->homeUrl.'web');
@@ -132,7 +133,7 @@
 											</a>
 											<ul class="dropdown-menu hidden-xs">
 												<?php foreach ($complexes as $key => $complex): ?>
-													<li><a href="<?= Yii::$app->urlManager->createUrl('complex?id='.$complex->id) ?>"><?= $complex->name ?></a></li>
+													<li><a href="<?= Yii::$app->urlManager->createUrl('complexes#recommended-block').$complex->id ?>"><?= $complex->name ?></a></li>
 												<?php endforeach ?>
 											</ul>
 										</li>
@@ -167,7 +168,7 @@
 								<h4>Рекомендуемые проверки</h4>
 								<ul>
 									<?php foreach ($footerComplexes as $key => $complex): ?>
-										<li><a href="<?= Yii::$app->urlManager->createUrl('complex?id='.$complex->id) ?>"><?= $complex->name ?></a></li>
+										<li><a href="<?= Yii::$app->urlManager->createUrl('complexes#recommended-block').$complex->id ?>"><?= $complex->name ?></a></li>
 									<?php endforeach ?>
 									<li><a href="<?= Yii::$app->urlManager->createUrl('complexes') ?>">Все проверки <i class="fa fa-angle-double-right"></i></a></li>
 								</ul>

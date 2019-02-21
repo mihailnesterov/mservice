@@ -43,14 +43,6 @@ $services = Yii::$app->controller->getServices('services');
                         <div class="content-block col-xs-12">
                                 <h4>Услуги по ускоренной подготовке документов и справок по объектам недвижимости:</h4>
                                 <hr>
-                                <!--<ul>
-                                        <li>Выписка из ЕГРН</li>
-                                        <li>Истории перехода прав собственности</li>
-                                        <li>Выписки из департамента жилищной политики</li>
-                                        <li>Архивные/расширенные выписки из домовой книги</li>
-                                        <li>Документы БТИ, технические паспорта</li>
-                                        <li>Проверка Дееспособности физических лиц</li>
-                                </ul>-->
                                 <ul>
                                         <?php foreach ($services as $key => $service): ?>
                                                 <?php if ($service->description != ''): ?>
@@ -108,16 +100,20 @@ $services = Yii::$app->controller->getServices('services');
                 </div> <!-- end row -->
         </div> <!-- end container -->
 
-    <?php
-        // subscribe form
-        $subscribe = new \app\models\Subscribe();
-        if(Yii::$app->request->post('subscribe-field')){
-                $subscribe->email = Yii::$app->request->post('subscribe-field');
-                $subscribe->save();
-        }
-        echo $this->render('_subscribe', [
-            'subscribe' => $subscribe
-        ]);
-    ?>
+        <div id="recommended-order-banner" class="hidden-xs hidden-sm animated bounceInRight text-center">
+            <p>Комплексная проверка объекта недвижимости</p>
+            <?= Html::a('<i class="fa fa-arrow-circle-right"></i> Заказать', '@web/complexes') ?>
+        </div>
+        <?php
+                // subscribe form
+                $subscribe = new \app\models\Subscribe();
+                if(Yii::$app->request->post('subscribe-field')){
+                        $subscribe->email = Yii::$app->request->post('subscribe-field');
+                        $subscribe->save();
+                }
+                echo $this->render('_subscribe', [
+                'subscribe' => $subscribe
+                ]);
+        ?>
 
 </main> <!-- end main -->
