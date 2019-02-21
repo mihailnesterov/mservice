@@ -133,7 +133,7 @@
 											</a>
 											<ul class="dropdown-menu hidden-xs">
 												<?php foreach ($complexes as $key => $complex): ?>
-													<li><a href="<?= Yii::$app->urlManager->createUrl('complexes#recommended-block').$complex->id ?>"><?= $complex->name ?></a></li>
+													<li><a href="<?= Yii::$app->urlManager->createUrl('complexes#recommended-block')?><?= $complex->id ?>"><?= $complex->name ?></a></li>
 												<?php endforeach ?>
 											</ul>
 										</li>

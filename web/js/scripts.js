@@ -540,6 +540,7 @@
             recommendedBlockCount++;
         });
     });
+    /* если это страница complexes, то формируем меню Навигация */
     $(document).ready(function () {
         var mainID = $('main').attr('page-id');
         if(mainID === 'complex'){
@@ -551,7 +552,6 @@
                         + '<a href="' + document.location.href + '#' + $(this).attr('id') 
                         + '" class="scrolling-links">' 
                         + $(this).find('h3').html() + '</a>'
-                        //+ '<span class="comment" style="font-size: 0.8em; width: 50%;">' + $(this).find('.check-order-btn-block p').html() + '</span>'
                         + '</li>'
                 );
                 //recommendedBlockCount++;
