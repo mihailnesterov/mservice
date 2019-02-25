@@ -193,6 +193,7 @@
     $('input[name="services-checks-regions"]').change(function(){
         // вывести название региона в заголовки на шаге 2 и 3
         var selectedRegion = $('input[name="services-checks-regions"]:checked').attr('region-name');
+        
         //var selectedRegion = $('input[name="services-checks-regions"]:checked').html();
         $('#region-name-step1').html(selectedRegion);
         $('#region-name-step2').html(selectedRegion);
@@ -200,6 +201,8 @@
         // показать услуги только для выбранного региона, остальные скрыть
         // регионы сравниваются по атрибуту region="..."
         var selectedRegionId = $('input[name="services-checks-regions"]:checked').attr('region');
+        // сохраняем выбранный id в глобальной переменной regionID для дальнейшего использования
+        regionID = selectedRegionId;
         $('#order-select-services').find('.panel').each(function(){
             var serviceId = $(this).attr('region');
             if (serviceId === selectedRegionId) {
@@ -257,6 +260,31 @@
     // добавить услугу в корзину
     $('.select-price').on('change', function () {
         if ($(this).prop('selectedIndex') != 0) {
+            // делаем видимыми скрытые поля для избранных услуг (выбираем услугу по serviceId)
+            var serviceId = $(this).attr('service');
+            switch (serviceId) {
+                case '3':
+                    $('#object-address').val('нет');
+                    $('#object-address').closest('.form-group').addClass('hidden');
+                    $('#inn').closest('.form-group').removeClass('hidden');
+                    break;
+                case '4':
+                    $('#object-address').val('нет');
+                    $('#object-address').closest('.form-group').addClass('hidden');
+                    break;
+                case '9':
+                    $('#object-address').val('нет');
+                    $('#object-address').closest('.form-group').addClass('hidden');
+                    $('#reg-address').closest('.form-group').removeClass('hidden');
+                    $('#fio').closest('.form-group').removeClass('hidden');
+                    $('#birthday').closest('.form-group').removeClass('hidden');
+                    break;
+                default:
+                    $('#object-address').val('');
+                    if($('#object-address').closest('.form-group').hasClass('hidden'))
+                        $('#object-address').closest('.form-group').removeClass('hidden');
+                    break;
+            }
             // добавить услугу в список в корзине
             showcart();
             $('#cart-list').append(
@@ -272,9 +300,9 @@
             $('#table-order-step3').find('#total-tr').remove();
             // добавить строку с услугой
             $('#table-order-step3').append(
-                    '<tr>' + 
+                    '<tr class="region-tr" region="'+ regionID +'">' + 
                     '<td class="counter"></td>' +
-                    '<td>' + $(this.parentNode.parentNode).find('a').html() + ' <i class="fa fa-close" title="Удалить"></i></td>' +
+                    '<td><span class="service-name">' + $(this.parentNode.parentNode).find('a').html() + '</span> <i class="fa fa-close" title="Удалить"></i></td>' +
                     '<td class="sum">' + $(this).val() + '</td>' + 
                     '</tr>'
             );
@@ -586,8 +614,61 @@
     }).on('submit', function(e){
         e.preventDefault();
     });
+
+    /* фукнция добавления заказа на услуги (ajax) */
+    $('#order-service-form').on('beforeSubmit', function(e) {
+        e.preventDefault();
+        var order = {}; // создаем пустой объект для хранения позиций заказа
+        var orderId = 1; // счетчик - он-же id заказа в объекте
     
-    /* фукнция добавления заказа (ajax) */
+        // проходим в цикле по таблице заказа
+        $('#table-order-step3').find('.region-tr').each(function(){
+            
+             // получаем название услуги и цену
+             var name = $(this).find('.service-name').html();
+             var price = $(this).find('.sum').html();
+             // сохраняем в объекте название услуги и цену
+             order[orderId] = {};
+             order[orderId]['name'] = name;
+             order[orderId]['sum'] = price;
+             // увеличиваем счетчик и переходим к следующему id заказа в объекте
+             orderId++;
+        });
+
+        // сохраняем объект (все пункты заказа) в json
+        var orderJson = JSON.stringify(order);
+        // сохраняем json в cookie на 30 дней
+        Cookies.set('addOrderItem', orderJson, { expires: 30 });
+        
+        // сохраняем заказ в базу ajax запросом
+        var form = $(this);
+        var formData = form.serialize();
+        $.ajax({
+            url: form.attr('action'),
+            type: form.attr('method'),
+            data: formData,
+            success: function (data) {
+                $.gritter.add({
+                        title: data + ', Ваш заказ получен!',
+                        text: 'В ближайшее время мы свяжемся с вами',
+                        image: 'images/logo.jpg',
+                        sticky: false,
+                        time: '3000'
+                    });
+                $('#order-service-form :input').val('');
+                
+                return false;
+            },
+            error: function () {
+                alert('При оформлении заказа произошла ошибка!');
+            }
+        });
+        
+    }).on('submit', function(e){
+        e.preventDefault();
+    });
+    
+    /* фукнция добавления комплексного заказа (ajax) */
     $('#order-complex-form').on('beforeSubmit', function(e) {
         e.preventDefault();
         

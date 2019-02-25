@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use yii\widgets\ActiveForm;
 ?>
 
 <main role="main">			
@@ -136,7 +137,7 @@ use yii\helpers\Html;
                                                                 </div>
                                                         </div>	<!-- end col -->  
                                                         <div class="col-xs-12 col-sm-4">
-                                                                <select class="select-price form-control input-lg">
+                                                                <select class="select-price form-control input-lg" service="<?= $service->service->id ?>">
                                                                         <option>выбрать сроки и стоимость</option>
                                                                         <?php foreach ($prices as $key => $price): ?>
                                                                                 <?php if ( $price->serv_in_reg_id == $price->servInReg->id && $price->serv_in_reg_id == $service->id ): ?>
@@ -205,8 +206,11 @@ use yii\helpers\Html;
                                         <h2 class="text-center">Как с Вами связаться:</h2>
                                         <hr>
                                         <div class="row">
-                                        <form>
-                                                <div class="col-md-6 col-md-offset-3">
+                                        <!--<form>-->
+                                        <?php $form = ActiveForm::begin([
+                                                'id'  =>  'order-service-form',
+                                        ]); ?>
+                                                <div class="col-xs-12 col-xs-offset-2 col-md-6 col-md-offset-3">
                                                 <div class="form-group">
                                                         <div class="input-group">
                                                                 <div class="input-group-addon"><i class="fa fa-map-marker fa-2x" aria-hidden="true"></i></div>
@@ -216,23 +220,23 @@ use yii\helpers\Html;
                                                 <div class="form-group">
                                                         <div class="input-group">
                                                                 <div class="input-group-addon"><i class="fa fa-user fa-2x" aria-hidden="true"></i></div>
-                                                                <input type="text" class="form-control input-lg" placeholder="Ваше имя *" name="your-name" id="your-name" required />
+                                                                <input type="text" class="form-control input-lg" placeholder="Ваше имя *" name="client-name" id="client-name" value=<?= $clientName?> required />
                                                         </div>
                                                 </div>
                                                 <div class="form-group">
                                                         <div class="input-group">
                                                                 <div class="input-group-addon"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></div>
-                                                                <input type="text" class="form-control input-lg" placeholder="Электронный адрес: *" name="your-email" id="your-email" required />
+                                                                <input type="text" class="form-control input-lg" placeholder="Электронный адрес: *" name="client-email" id="client-email" value=<?= $clientEmail?> required />
                                                         </div>
                                                 </div>
                                                 <div class="form-group">
                                                         <div class="input-group">
                                                                 <div class="input-group-addon"><i class="fa fa-mobile fa-2x" aria-hidden="true"></i></div>
-                                                                <input type="text" class="form-control input-lg" placeholder="Контактный телефон *" name="your-phone" id="your-phone" required />
+                                                                <input type="text" class="form-control input-lg" placeholder="Контактный телефон *" name="client-phone" id="client-phone" value=<?= $clientPhone?> required />
                                                         </div>
                                                 </div>
-                                                </div> <!-- end col -->
-                                                <div class="col-md-6">
+                                                <!--</div>--> <!-- end col -->
+                                                <!--<div class="col-md-6">-->
                                                 <div class="form-group hidden">
                                                         <div class="input-group">
                                                                 <div class="input-group-addon"><i class="fa fa-address-card-o fa-2x" aria-hidden="true"></i></div>
@@ -266,9 +270,11 @@ use yii\helpers\Html;
                                                         </label>
                                                 </div>
                                                 <hr>
-                                                <button type="submit" class="btn btn-danger btn-lg">Оформить заказ</button>
+                                                <!--<button type="submit" class="btn btn-danger btn-lg">Оформить заказ</button>-->
+                                                <?= Html::submitButton('Оформить заказ', ['class' => 'btn btn-danger btn-lg']) ?>
                                                 </div> <!-- end col -->
-                                        </form>
+                                        <?php ActiveForm::end(); ?>
+                                        <!--</form>-->
                                         </div>	<!-- end row -->
                                 </div>	<!-- end #order-payment -->
                         </div>	<!-- end tabpanel -->

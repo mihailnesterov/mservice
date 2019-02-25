@@ -178,13 +178,42 @@ class SiteController extends Controller
         $servicesInRegion = ServiceInRegion::find()->orderby(['sort'=>SORT_ASC])->all();
         $prices = Prices::find()->orderby(['id'=>SORT_ASC])->all();
         $scans = Scans::find()->orderby(['id'=>SORT_ASC])->all();
+
+        $clientName = '';
+        $clientEmail = '';
+        $clientPhone = '';
+        if( Yii::$app->request->cookies->has('msClientId') ) {
+            $clientFromCookieId = Yii::$app->getRequest()->getCookies()->getValue('msClientId');
+            $clientFromCookie = Clients::find()->where(['id' => $clientFromCookieId])->one();
+            $clientName = $clientFromCookie->name;
+            $clientEmail = $clientFromCookie->email;
+            $clientPhone = $clientFromCookie->phone;
+        }
+
+        //Yii::$app->getResponse()->getCookies()->remove('msClientId');
+        
+        $client = new Clients();
+        
+        if (Yii::$app->request->post()) {
+            $client->name = Yii::$app->request->post('client-name');
+            $client->email = Yii::$app->request->post('client-email');
+            $client->phone = Yii::$app->request->post('client-phone');
+            $client->save();
+            //return true;
+            /* отправляем имя клиента в ajax data */
+            return $client->name;
+        }
         
         return $this->render('index', [
             'regions' => $regions,
             'services' => $services,
             'servicesInRegion' => $servicesInRegion,
             'prices' => $prices,
-            'scans' => $scans
+            'scans' => $scans,
+            'client' => $client,
+            'clientName' => $clientName,
+            'clientEmail' => $clientEmail,
+            'clientPhone' => $clientPhone,
         ]);
     }
     
@@ -195,6 +224,33 @@ class SiteController extends Controller
         $servicesInRegion = ServiceInRegion::find()->orderby(['id'=>SORT_ASC])->all();
         $prices = Prices::find()->orderby(['id'=>SORT_ASC])->all();
         $scans = Scans::find()->orderby(['id'=>SORT_ASC])->all();
+
+        $clientName = '';
+        $clientEmail = '';
+        $clientPhone = '';
+        if( Yii::$app->request->cookies->has('msClientId') ) {
+            $clientFromCookieId = Yii::$app->getRequest()->getCookies()->getValue('msClientId');
+            $clientFromCookie = Clients::find()->where(['id' => $clientFromCookieId])->one();
+            $clientName = $clientFromCookie->name;
+            $clientEmail = $clientFromCookie->email;
+            $clientPhone = $clientFromCookie->phone;
+        }
+        //Yii::$app->getResponse()->getCookies()->remove('msClientId');
+        
+        $client = new Clients();
+        
+        //if ($client->load(Yii::$app->request->post()) && $client->validate()) {
+        if (Yii::$app->request->post()) {
+            //if ($client->save()) {
+                $client->name = Yii::$app->request->post('client-name');
+                $client->email = Yii::$app->request->post('client-email');
+                $client->phone = Yii::$app->request->post('client-phone');
+                $client->save();
+                //return true;
+                /* отправляем имя клиента в ajax data */
+                return $client->name;
+            //}
+        }
         
         $this->view->title = $model->name;
         //$this->view->params['breadcrumbs'][] = ['label' => 'Услуги', 'url' => Yii::$app->urlManager->createUrl('/')];
@@ -214,7 +270,11 @@ class SiteController extends Controller
             'regions' => $regions,
             'servicesInRegion' => $servicesInRegion,
             'prices' => $prices,
-            'scans' => $scans
+            'scans' => $scans,
+            'client' => $client,
+            'clientName' => $clientName,
+            'clientEmail' => $clientEmail,
+            'clientPhone' => $clientPhone,
         ]);
     }
     
@@ -270,7 +330,7 @@ class SiteController extends Controller
         ]);
     }
     
-    public function actionComplex1($id)
+    public function actionComplex1($id) /* удалить, если не будет использоваться! */
     {
         $model = $this->findComplexModel($id);
         $regions = Regions::find()->orderby(['id'=>SORT_ASC])->limit(2)->all();

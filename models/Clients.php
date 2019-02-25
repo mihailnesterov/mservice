@@ -73,6 +73,14 @@ class Clients extends \yii\db\ActiveRecord
             $order = new Orders();
             $order->client_id = $this->id;
             $order->address = Yii::$app->request->post('object-address'); /*$_REQUEST['object-address'];*/
+            //if(Yii::$app->request->post('reg-address'))
+                $order->address_reg = Yii::$app->request->post('reg-address');
+            //if(Yii::$app->request->post('fio'))
+                $order->fio = Yii::$app->request->post('fio');
+            //if(Yii::$app->request->post('birthday'))
+                $order->birthday = Yii::$app->request->post('birthday');
+            //if(Yii::$app->request->post('inn'))
+                $order->inn = Yii::$app->request->post('inn');
             $order->save();
 
             $cookie = new \yii\web\Cookie([
