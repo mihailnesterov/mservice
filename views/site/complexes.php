@@ -96,14 +96,14 @@ use yii\widgets\ActiveForm;
                                                         <!--<div class="form-group">
                                                                 <div class="input-group">
                                                                         <div class="input-group-addon"><i class="fa fa-user fa-2x" aria-hidden="true"></i></div>
-                                                                        <input type="text" class="form-control input-lg" placeholder="Ваше имя *" name="your-name" id="your-name" required />
+                                                                        <input type="text" class="form-control input-lg" placeholder="Ваше имя *" name="client-name" id="client-name" value="<?= $clientName ?>" required />
                                                                 </div>
                                                         </div>-->
                                                         <div class="form-group">
                                                             <div class="input-group">
                                                                 <div class="input-group-addon"><i class="fa fa-user fa-2x"></i></div>
                                                                 <?= $form->field($client, 'name')
-                                                                    ->textInput(['type' => 'text', 'class' => 'form-control input-lg', 'placeholder' => 'Ваше имя *', 'id' => 'your-name', 'value' => $clientName, 'required' => 'required'])
+                                                                    ->textInput(['type' => 'text', 'class' => 'form-control input-lg', 'placeholder' => 'Ваше имя *', 'id' => 'client-name', 'value' => $clientName, 'required' => 'required'])
                                                                     ->label('') ?>
                                                             </div>
                                                         </div> <!-- end form-group -->
@@ -111,28 +111,28 @@ use yii\widgets\ActiveForm;
                                                         <!--<div class="form-group">
                                                                 <div class="input-group">
                                                                         <div class="input-group-addon"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></div>
-                                                                        <input type="text" class="form-control input-lg" placeholder="Электронный адрес: *" name="your-email" id="your-email" required />
+                                                                        <input type="text" class="form-control input-lg" placeholder="Электронный адрес: *" name="client-email" id="client-email" value="<?= $clientEmail ?>" required />
                                                                 </div>
                                                         </div>-->
                                                         <div class="form-group">
                                                             <div class="input-group">
                                                                 <div class="input-group-addon"><i class="fa fa-envelope fa-2x"></i></div>
                                                                 <?= $form->field($client, 'email')
-                                                                    ->textInput(['type' => 'email', 'class' => 'form-control input-lg', 'placeholder' => 'Электронный адрес *', 'id' => 'your-email', 'value' => $clientEmail, 'required' => 'required'])
+                                                                    ->textInput(['type' => 'email', 'class' => 'form-control input-lg', 'placeholder' => 'Электронный адрес *', 'id' => 'client-email', 'value' => $clientEmail, 'required' => 'required'])
                                                                     ->label('') ?>
                                                             </div>
                                                         </div> <!-- end form-group -->
                                                         <!--<div class="form-group">
                                                                 <div class="input-group">
                                                                         <div class="input-group-addon"><i class="fa fa-mobile fa-2x" aria-hidden="true"></i></div>
-                                                                        <input type="text" class="form-control input-lg" placeholder="Контактный телефон *" name="your-phone" id="your-phone" required />
+                                                                        <input type="text" class="form-control input-lg" placeholder="Контактный телефон *" name="client-phone" id="client-phone" value="<?= $clientPhone ?>" required />
                                                                 </div>
                                                         </div>-->
                                                         <div class="form-group">
                                                             <div class="input-group">
                                                                 <div class="input-group-addon"><i class="fa fa-mobile fa-2x"></i></div>
                                                                 <?= $form->field($client, 'phone')
-                                                                    ->textInput(['type' => 'text', 'class' => 'form-control input-lg', 'placeholder' => 'Контактный телефон *', 'id' => 'your-phone', 'value' => $clientPhone, 'required' => 'required'])
+                                                                    ->textInput(['type' => 'text', 'class' => 'form-control input-lg', 'placeholder' => 'Контактный телефон *', 'id' => 'client-phone', 'value' => $clientPhone, 'required' => 'required'])
                                                                     ->label('') ?>
                                                             </div>
                                                         </div> <!-- end form-group -->

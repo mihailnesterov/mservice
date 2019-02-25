@@ -318,6 +318,18 @@ class SiteController extends Controller
             }
         }
 
+        //$client = new Clients();
+        
+        /*if (Yii::$app->request->post()) {
+                $client->name = Yii::$app->request->post('client-name');
+                $client->email = Yii::$app->request->post('client-email');
+                $client->phone = Yii::$app->request->post('client-phone');
+                $client->save();*/
+                //return true;
+                /* отправляем имя клиента в ajax data */
+                /*return $client->name;
+        }*/
+
         return $this->render('complexes', [
             'regions' => $regions,
             'complexes' => $complexes,
