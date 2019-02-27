@@ -574,21 +574,28 @@
         });
     });
     /* если это страница complexes, то формируем меню Навигация */
-    $(document).ready(function () {
+    function goToAnchor(anchor) {
+        window.location.hash = anchor; // можно и просто window.location, без hash
+    }
+    $(function () {
         var mainID = $('main').attr('page-id');
         if(mainID === 'complex'){
             $('#recommended-menu').removeClass('hidden');
-            //var recommendedBlockCount = 1;
             $('.recommended-block').each(function(){
-                //$(this).attr('id','recommended-block' + recommendedBlockCount);
                 $('#recommended-menu').find('ol').append('<li>'
-                        + '<a href="' + document.location.href + '#' + $(this).attr('id') 
+                        //+ '<a href="' + document.location.href + '#' + $(this).attr('id')
+                        + '<a href="complexes#' + $(this).attr('id')  
                         + '" class="scrolling-links">' 
                         + $(this).find('h3').html() + '</a>'
                         + '</li>'
                 );
-                //recommendedBlockCount++;
             });
+            // если в url есть # - получить анкор и перейти на него
+            if(window.location.hash) {
+                var anchor = window.location.hash;
+                goToAnchor(anchor);
+            }
+            
         }
     });
     
