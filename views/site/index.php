@@ -120,7 +120,7 @@ use yii\widgets\ActiveForm;
                                 </header>
                                 
                                         <div class="service-block relative row">
-                                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">                                                               
+                                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                                 <?php foreach ($servicesInRegion as $key => $service): ?>
                                                         <div class="panel panel-default row" region="<?= $service->region_id ?>">
                                                         <div class="col-xs-12 col-sm-8">
@@ -150,7 +150,7 @@ use yii\widgets\ActiveForm;
                                                                 </div>
                                                         </div>	<!-- end col -->  
                                                         <div class="col-xs-12 col-sm-4">
-                                                                <select class="select-price form-control input-lg" service="<?= $service->service->id ?>">
+                                                                <select class="select-price form-control input-lg" tabindex="<?=  $service->service->sort ?>" service="<?= $service->service->id ?>">
                                                                         <option>выбрать сроки и стоимость</option>
                                                                         <?php foreach ($prices as $key => $price): ?>
                                                                                 <?php if ( $price->serv_in_reg_id == $price->servInReg->id && $price->serv_in_reg_id == $service->id ): ?>
@@ -425,7 +425,7 @@ use yii\widgets\ActiveForm;
                 <div class="col-xs-6 col-sm-4">
                         <div class="advance-block">
                                 <div class="advance-header">
-                                        <img src="images/advance1.png" alt="" class="img-responsive">
+                                        <img src="images/advance1.png" alt="Экспертность" class="img-responsive">
                                         <h2>Экспертность</h2>
                                 </div>
                                 <p>Мы являемся экспертами в области срочных юридических проверок недвижимости</p>
@@ -434,7 +434,7 @@ use yii\widgets\ActiveForm;
                 <div class="col-xs-6 col-sm-4">
                         <div class="advance-block">
                                 <div class="advance-header">
-                                        <img src="images/advance2.png" alt="" class="img-responsive">
+                                        <img src="images/advance2.png" alt="Опыт" class="img-responsive">
                                         <h2>Опыт</h2>
                                 </div>
                                 <p>Более 10 лет мы реализуем срочную подготовку документов в сегменте недвижимости</p>
@@ -443,7 +443,7 @@ use yii\widgets\ActiveForm;
                 <div class="col-xs-12 col-sm-4">
                         <div class="advance-block">
                                 <div class="advance-header">
-                                        <img src="images/advance3.png" alt="" class="img-responsive">
+                                        <img src="images/advance3.png" alt="Надежность" class="img-responsive">
                                         <h2>Надежность</h2>
                                 </div>
                                 <p>Мы всегда находим компромисс при сложных проверках</p>
@@ -453,10 +453,10 @@ use yii\widgets\ActiveForm;
 
         <div id="banners-on-main" class="row">
                 <div class="col-sm-7">
-                        <a href="#"><img src="images/bg.png" alt="" width="100%" height="200"></a>
+                        <a href="#"><img src="images/bg.png" alt="Баннер 1" width="100%" height="200"></a>
                 </div> <!-- end col -->
                 <div class="col-sm-5">
-                        <a href="#"><img src="images/bg.png" alt="" width="100%" height="200"></a>
+                        <a href="#"><img src="images/bg.png" alt="Баннер 2" width="100%" height="200"></a>
                 </div> <!-- end col -->
         </div> <!-- end banners-on-main -->
 

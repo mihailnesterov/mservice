@@ -106,6 +106,7 @@
     $('#go-step1').click(function() {
         hidecart();
         $('#banner-on-main-container').show();
+        $('.for-whom').show();
         $('.advance').show();
         $('#about-on-main').show();
         $('#banners-on-main').show();
@@ -125,6 +126,7 @@
         
         $('#banner-on-main-container').show();
         $('.advance').show();
+        $('.for-whom').show();
         $('#about-on-main').show();
         $('#banners-on-main').show();
         $('#testimonials-on-main').show();
@@ -140,6 +142,7 @@
         showcart();
         $('#banner-on-main-container').hide();
         $('.advance').hide();
+        $('.for-whom').hide();
         $('#about-on-main').hide();
         $('#banners-on-main').hide();
         $('#testimonials-on-main').hide();
@@ -171,6 +174,7 @@
                         
                         $('#banner-on-main-container').hide();
                         $('.advance').hide();
+                        $('.for-whom').hide();
                         $('#about-on-main').hide();
                         $('#banners-on-main').hide();
                         $('#testimonials-on-main').hide();
@@ -181,11 +185,6 @@
                 }
         });
     });
-    
-    // при загрузке страницы установить регион "Москва" на шаге 1
-    /*$(document).ready(function(){
-        $('#step1').find('#region-1').attr('checked', true).change();
-    });*/
     
     // выбрать регион на шаге 1
     
@@ -259,6 +258,7 @@
 
     // добавить услугу в корзину
     $('.select-price').on('change', function () {
+        var selectPrice = $(this);
         if ($(this).prop('selectedIndex') != 0) {
             // делаем видимыми скрытые поля для избранных услуг (выбираем услугу по serviceId)
             var serviceId = $(this).attr('service');
@@ -324,6 +324,11 @@
 
             //скрыть "Корзина пуста..."
             $('#cart-empty-text').hide();
+
+            // поставить focus на следующей услуге
+            var tabindex = selectPrice.attr('tabindex');
+            var nextTab = parseInt(tabindex)+1;
+            $('.select-price[tabindex=' + nextTab + ']').focus();
 
             // показать сообщение gritter
             $.gritter.add({
