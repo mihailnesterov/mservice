@@ -321,6 +321,39 @@ a:hover {
 	vertical-align: middle;
 }
 
+/* блок под слайдером на главной */
+.for-whom {
+	/*display: inline-block;*/
+	margin: 2.5em 0;
+	border: 0px red solid;
+}
+.for-whom-block {
+	/*margin: 1em;*/
+	border: 1px #eee solid;
+}
+.for-whom-block:hover {
+	opacity: 0.9;
+}
+.for-whom-header {
+	padding: 1em;
+	min-height: 210px;
+	border: 0px green solid;
+	/*background-color: #f9f9f9;
+	background-color: #F1E9DB;*/
+	border-bottom: 1px #eee solid;
+}
+.for-whom-header img {
+	padding: 1em 4.5em;
+}
+.for-whom-header h3 {
+	padding: 0.4em 0.5em;
+}
+.for-whom-block p {
+	line-height: 1.5;
+	padding: 1.5em;
+	min-height: 148px;
+}
+
 /* блок экспертность - опыт - надежность на главной */
 .advance {
 	display: inline-block;
@@ -349,6 +382,7 @@ a:hover {
 	padding: 0 1em 1em 1em;
 }
 
+/* блок о нас на главной */
 #about-on-main {
 	padding: 1em;
 }

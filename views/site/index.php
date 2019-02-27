@@ -24,37 +24,50 @@ use yii\widgets\ActiveForm;
 
     <div class="container">
         <div class="row">
-                <div class="advance">
-                        <div class="col-xs-6 col-sm-4">
-                                <div class="advance-block">
-                                        <div class="advance-header">
-                                                <img src="images/advance1.png" alt="">
-                                                <h2>Экспертность</h2>
-                                        </div>
-                                        <p>Мы являемся экспертами в области срочных юридических проверок недвижимости</p>
-                                </div>
-                        </div> <!-- end col -->
-                        <div class="col-xs-6 col-sm-4">
-                                <div class="advance-block">
-                                        <div class="advance-header">
-                                                <img src="images/advance2.png" alt="">
-                                                <h2>Опыт</h2>
-                                        </div>
-                                        <p>Более 10 лет мы реализуем срочную подготовку документов в сегменте недвижимости</p>
-                                </div>
-                        </div> <!-- end col -->
-                        <div class="col-xs-12 col-sm-4">
-                                <div class="advance-block">
-                                        <div class="advance-header">
-                                                <img src="images/advance3.png" alt="">
-                                                <h2>Надежность</h2>
-                                        </div>
-                                        <p>Мы всегда находим компромисс при сложных проверках</p>
-                                </div>	
-                </div> <!-- end col -->
-        </div> <!-- end advance -->
 
-        <div id="order" class="col-sm-12">
+                <div class="for-whom row">
+                        <div class="col-xs-6 col-md-3">
+                                <div class="for-whom-block text-center">
+                                        <div class="for-whom-header">
+                                                <img src="images/apartment.png" alt="Покупка квартиры" class="img-responsive">
+                                                <!--<h3><p>Квартира</p> <p>Комната</p> <p>Доля в праве</p></h3>-->
+                                                <h3>Квартира Комната Доля в праве</h3>
+                                        </div>
+                                        <p>Срочная подготовка документов перед покупкой квартиры</p>
+                                </div>
+                        </div> <!-- end col -->
+                        <div class="col-xs-6 col-md-3">
+                                <div class="for-whom-block text-center">
+                                        <div class="for-whom-header">
+                                                <img src="images/loan.png" alt="Документы для ипотеки" class="img-responsive">
+                                                <h3>Документы для ипотеки</h3>
+                                        </div>
+                                        <p>Срочная подготовка документов для ипотечной сделки</p>
+                                </div>
+                        </div> <!-- end col -->
+                        <div class="col-xs-6 col-md-3">
+                                <div class="for-whom-block text-center">
+                                        <div class="for-whom-header">
+                                                <img src="images/interior.png" alt="Перепланировка" class="img-responsive">
+                                                <h3>Перепланировки помещений</h3>
+                                        </div>
+                                        <p>Срочная проверка несанкционированных перепланировок помещений</p>
+                                </div>
+                        </div> <!-- end col -->
+                        <div class="col-xs-6 col-md-3">
+                                <div class="for-whom-block text-center">
+                                        <div class="for-whom-header">
+                                                <img src="images/commercial.png" alt="Коммерческая недвижимость" class="img-responsive">
+                                                <h3>Коммерческая недвижимость</h3>
+                                        </div>
+                                        <p>Срочная проверка документов перед покупкой коммерческой недвижимости</p>
+                                </div>
+                        </div> <!-- end col -->
+                </div> <!-- end for-whom -->
+
+                
+
+        <div id="order" class="row">
 
                 <!--<div id="order-steps" class="row">
                         <div class="col-xs-4 text-right">
@@ -279,10 +292,10 @@ use yii\widgets\ActiveForm;
                                 </div>	<!-- end #order-payment -->
                         </div>	<!-- end tabpanel -->
                 </div>	<!-- end tab-content -->
-        </div> <!-- end col -->
+        </div> <!-- end row -->
 
 
-        <div id="about-on-main">
+        <div id="about-on-main" class="row">
                 <div class="col-xs-12 col-sm-12 col-md-6 text-right">
                         <div id="about-on-main-left">
                                 <h2>О компании</h2>
@@ -312,6 +325,7 @@ use yii\widgets\ActiveForm;
                         </div>
                 </div> <!-- end col -->
                 <div class="col-xs-12 col-sm-12 col-md-6">
+                        
                         <div id="about-on-main-right">
                                 <div class="about-services row">
                                         <div class="col-xs-3">
@@ -405,18 +419,48 @@ use yii\widgets\ActiveForm;
                                 </div>
                         </div>
                 </div> <!-- end col -->
-        </div>
+        </div> <!-- end about-on-main -->
 
-        <div id="banners-on-main">
+        <div class="advance row">
+                <div class="col-xs-6 col-sm-4">
+                        <div class="advance-block">
+                                <div class="advance-header">
+                                        <img src="images/advance1.png" alt="" class="img-responsive">
+                                        <h2>Экспертность</h2>
+                                </div>
+                                <p>Мы являемся экспертами в области срочных юридических проверок недвижимости</p>
+                        </div>
+                </div> <!-- end col -->
+                <div class="col-xs-6 col-sm-4">
+                        <div class="advance-block">
+                                <div class="advance-header">
+                                        <img src="images/advance2.png" alt="" class="img-responsive">
+                                        <h2>Опыт</h2>
+                                </div>
+                                <p>Более 10 лет мы реализуем срочную подготовку документов в сегменте недвижимости</p>
+                        </div>
+                </div> <!-- end col -->
+                <div class="col-xs-12 col-sm-4">
+                        <div class="advance-block">
+                                <div class="advance-header">
+                                        <img src="images/advance3.png" alt="" class="img-responsive">
+                                        <h2>Надежность</h2>
+                                </div>
+                                <p>Мы всегда находим компромисс при сложных проверках</p>
+                        </div>	
+                </div> <!-- end col -->
+        </div> <!-- end advance -->
+
+        <div id="banners-on-main" class="row">
                 <div class="col-sm-7">
                         <a href="#"><img src="images/bg.png" alt="" width="100%" height="200"></a>
                 </div> <!-- end col -->
                 <div class="col-sm-5">
                         <a href="#"><img src="images/bg.png" alt="" width="100%" height="200"></a>
                 </div> <!-- end col -->
-        </div>
+        </div> <!-- end banners-on-main -->
 
-            </div> <!-- end row -->
+        </div> <!-- end row -->
     </div> <!-- end container -->
 
     <div id="testimonials-on-main" class="container-fluid hidden">
