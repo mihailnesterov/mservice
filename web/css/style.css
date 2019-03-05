@@ -103,6 +103,13 @@ a:hover {
 #top #top-left-block {
 	margin-top: 0.5em;
 }
+/* блок под логотипом */
+#top #top-left-block #mservice {
+	font-weight: 600;
+}
+#top #top-left-block #mservice span {
+	color: #09d12a;
+}
 #top #top-left-block #slogan {
 	display: inline-block;
 	vertical-align: middle;
@@ -356,17 +363,21 @@ a:hover {
 
 /* блок экспертность - опыт - надежность на главной */
 .advance {
-	display: inline-block;
+	/*display: inline-block;*/
 	margin-top: 3em;
 }
 .advance-block {
 	margin: 1em;
+	padding: 0.5em;
+	border: 1px #eee solid;
+	min-height: 180px;
 }
 .advance-header {
 	text-align: center;
 	margin-bottom: 1em;
 	margin-top: 1em;
 	height: 50px;
+	border-bottom: 1px #eee solid;
 }
 .advance-header img, 
 .advance-header h2 {
@@ -418,15 +429,17 @@ a:hover {
 }
 
 .about-services {
-	margin-bottom: 0.5em;
-	padding: 0.7em 1.8em;
+	margin: 1em 0;
+	/*padding: 0.7em 1.8em;*/
+	padding: 1em 1.8em;
 	/*border: 1px #F1E9DB solid;*/
+	border: 1px #eee solid;
 }
 
 .about-services .img-block,
 .about-services .text-block {
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: middle;
 	/*transform: translateY(10%);
 	top: 10%;*/
 }
@@ -456,7 +469,6 @@ a:hover {
 .about-services .text-block p {
 	line-height: 1.3;
 }
-
 #order-select-services {
 	background-color: #fff;
 	padding: 2em;

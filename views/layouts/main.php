@@ -77,6 +77,7 @@
 									), 
 									'@web'
 								)?>
+								<p id="mservice">M<span>|</span>SERVICE</p>
 							</div>
 							<div id="slogan" class="col-sm-7 col-md-9">
 								<p>Срочные экспертные проверки</p>

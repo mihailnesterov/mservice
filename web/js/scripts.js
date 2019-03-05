@@ -574,8 +574,9 @@
         });
     });
     /* если это страница complexes, то формируем меню Навигация */
-    function goToAnchor(anchor) {
-        window.location.hash = anchor; // можно и просто window.location, без hash
+    /* функция  goToAnchor() для правильной обработки переходов по якорям*/
+    function goToAnchor(url) {
+        location.href = url;
     }
     $(function () {
         var mainID = $('main').attr('page-id');
@@ -591,11 +592,11 @@
                 );
             });
             // если в url есть # - получить анкор и перейти на него
-            if(window.location.hash) {
-                var anchor = window.location.hash;
-                goToAnchor(anchor);
+            if(location.hash.length > 0) {
+                var anchor = location.hash;
+                var url = location.pathname + anchor;
+                goToAnchor(url);
             }
-            
         }
     });
     
