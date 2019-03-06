@@ -202,15 +202,15 @@
 	<div id="cart-container" class="fadeInUp animated">
 		<div id="cart" class="container">
 			<div class="row">
-				<div class="col-sm-1 text-center">
+				<div class="col-xs-2 col-sm-1 text-center">
 					<i class="fa fa-shopping-basket fa-3x"></i>
 				</div>
-				<div class="col-sm-7">
+				<div class="col-xs-10 col-sm-7">
 					<p id="cart-empty-text">Корзина пуста...</p>
 					<ol id="cart-list">
 					</ol>
 				</div>
-				<div class="col-sm-4 text-right">
+				<div class="col-xs-12 col-sm-4 text-right">
 					<div id="sum-block">
 						<span id="sum">0</span> 
 						<i class="fa fa-rub"></i>

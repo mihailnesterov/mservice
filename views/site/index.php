@@ -23,70 +23,54 @@ use yii\widgets\ActiveForm;
     </div> <!-- end container-fluid -->
 
     <div class="container">
-        <div class="row">
-
-                <div class="for-whom row">
-                        <div class="col-xs-6 col-md-3">
-                                <div class="for-whom-block text-center">
-                                        <div class="for-whom-header">
-                                                <img src="images/apartment.png" alt="Покупка квартиры" class="img-responsive">
-                                                <!--<h3><p>Квартира</p> <p>Комната</p> <p>Доля в праве</p></h3>-->
-                                                <h3>Квартира Комната Доля в праве</h3>
-                                        </div>
-                                        <p>Срочная подготовка документов перед покупкой квартиры</p>
-                                </div>
-                        </div> <!-- end col -->
-                        <div class="col-xs-6 col-md-3">
-                                <div class="for-whom-block text-center">
-                                        <div class="for-whom-header">
-                                                <img src="images/loan.png" alt="Документы для ипотеки" class="img-responsive">
-                                                <h3>Документы для ипотеки</h3>
-                                        </div>
-                                        <p>Срочная подготовка документов для ипотечной сделки</p>
-                                </div>
-                        </div> <!-- end col -->
-                        <div class="col-xs-6 col-md-3">
-                                <div class="for-whom-block text-center">
-                                        <div class="for-whom-header">
-                                                <img src="images/interior.png" alt="Перепланировка" class="img-responsive">
-                                                <h3>Перепланировки помещений</h3>
-                                        </div>
-                                        <p>Срочная проверка несанкционированных перепланировок помещений</p>
-                                </div>
-                        </div> <!-- end col -->
-                        <div class="col-xs-6 col-md-3">
-                                <div class="for-whom-block text-center">
-                                        <div class="for-whom-header">
-                                                <img src="images/commercial.png" alt="Коммерческая недвижимость" class="img-responsive">
-                                                <h3>Коммерческая недвижимость</h3>
-                                        </div>
-                                        <p>Срочная проверка документов перед покупкой коммерческой недвижимости</p>
-                                </div>
-                        </div> <!-- end col -->
-                </div> <!-- end for-whom -->
+      <div class="row1">
+         <div class="for-whom row">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+               <div class="for-whom-block text-center">
+                  <div class="for-whom-header">
+                     <img src="images/apartment.png" alt="Покупка квартиры" class="img-responsive">
+                     <!--<h3><p>Квартира</p> <p>Комната</p> <p>Доля в праве</p></h3>-->
+                     <h3>Квартира Комната Доля в праве</h3>
+                  </div>
+                  <p>Срочная подготовка документов перед покупкой квартиры</p>
+               </div>
+            </div> <!-- end col -->
+            <div class="col-xs-12 col-sm-6 col-md-3">
+               <div class="for-whom-block text-center">
+                  <div class="for-whom-header">
+                     <img src="images/loan.png" alt="Документы для ипотеки" class="img-responsive">
+                     <h3>Документы для ипотеки</h3>
+                  </div>
+                  <p>Срочная подготовка документов для ипотечной сделки</p>
+               </div>
+            </div> <!-- end col -->
+            <div class="col-xs-12 col-sm-6 col-md-3">
+               <div class="for-whom-block text-center">
+                  <div class="for-whom-header">
+                     <img src="images/interior.png" alt="Перепланировка" class="img-responsive">
+                     <h3>Перепланировки помещений</h3>
+                  </div>
+                  <p>Срочная проверка несанкционированных перепланировок помещений</p>
+               </div>
+            </div> <!-- end col -->
+            <div class="col-xs-12 col-sm-6 col-md-3">
+               <div class="for-whom-block text-center">
+                  <div class="for-whom-header">
+                     <img src="images/commercial.png" alt="Коммерческая недвижимость" class="img-responsive">
+                     <h3>Коммерческая недвижимость</h3>
+                  </div>
+                  <p>Срочная проверка документов перед покупкой коммерческой недвижимости</p>
+               </div>
+            </div> <!-- end col -->
+         </div> <!-- end for-whom -->
 
                 
 
         <div id="order" class="row">
-
-                <!--<div id="order-steps" class="row">
-                        <div class="col-xs-4 text-right">
-                                <p id="order-steps-1" >Шаг 1</p>
-                        </div>
-                        <div class="col-xs-4 text-center">
-                                <p id="order-steps-2" >Шаг 2</p>
-                        </div>
-                        <div class="col-xs-4 text-left">
-                                <p id="order-steps-3" >Шаг 3</p>
-                        </div>
-                </div>-->
-
                 <!-- Вкладки панелей -->  
                 <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="select-services">
                                 <div id="order-select-services">
-                                <!--<a id="go-step1" href="#regions" data-toggle="tab"><i class="fa fa-chevron-left"></i> К выбору региона</a>
-                                -->
                                 <header class="relative">
                                         <h2 class="text-center">Выберите регион (<span id="region-name-step1">Москва</span>)</h2>
                                         <hr>
@@ -122,31 +106,31 @@ use yii\widgets\ActiveForm;
                                         <div class="service-block relative row">
                                                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                                 <?php foreach ($servicesInRegion as $key => $service): ?>
-                                                        <div class="panel panel-default row" region="<?= $service->region_id ?>">
+                                                    <div class="panel panel-default row" region="<?= $service->region_id ?>">
                                                         <div class="col-xs-12 col-sm-8">
                                                                 <div class="panel-heading" role="tab" id="heading<?= $service->id ?>">
                                                                 <h4 class="panel-title">
-                                                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?= $service->id ?>" aria-expanded="true" aria-controls="collapse<?= $service->id ?>">
-                                                                                <?= $service->service->name ?>
-                                                                        </a>
+                                                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?= $service->id ?>" aria-expanded="true" aria-controls="collapse<?= $service->id ?>">
+                                                                        <?= $service->service->name ?>
+                                                                    </a>
                                                                 </h4>
                                                                 </div>
                                                                 <div id="collapse<?= $service->id ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<?= $service->id ?>">
-                                                                        <div class="panel-body">
-                                                                                <p><?= $service->service->description ?></p>
-                                                                                <div class="row">
-                                                                                        <h4 class="col-xs-12">Образец:</h4>
-                                                                                        <?php $imgCounter = 1; ?> 
-                                                                                        <?php foreach ($scans as $key => $scan): ?>      
-                                                                                                <?php if ( $scan->service->id == $service->service->id): ?>
-                                                                                                <div class="scan col-xs-12 col-sm-6 col-md-4" style="">
-                                                                                                        <a href="images/<?= $scan->img_path ?>" data-lightbox="image-<?= $imgCounter ?>"><img src="images/<?= $scan->img_path ?>" alt="Образец <?= $scan->id ?>" class="img-responsive"></a>
-                                                                                                </div>
-                                                                                                <?php endif ?>
-                                                                                                <?php $imgCounter++; ?>
-                                                                                        <?php endforeach ?>
-                                                                                </div>
-                                                                        </div>
+                                                                    <div class="panel-body">
+                                                                            <p><?= $service->service->description ?></p>
+                                                                            <div class="row">
+                                                                                    <h4 class="col-xs-12">Образец:</h4>
+                                                                                    <?php $imgCounter = 1; ?> 
+                                                                                    <?php foreach ($scans as $key => $scan): ?>      
+                                                                                            <?php if ( $scan->service->id == $service->service->id): ?>
+                                                                                            <div class="scan col-xs-12 col-sm-6 col-md-4" style="">
+                                                                                                    <a href="images/<?= $scan->img_path ?>" data-lightbox="image-<?= $imgCounter ?>"><img src="images/<?= $scan->img_path ?>" alt="Образец <?= $scan->id ?>" class="img-responsive"></a>
+                                                                                            </div>
+                                                                                            <?php endif ?>
+                                                                                            <?php $imgCounter++; ?>
+                                                                                    <?php endforeach ?>
+                                                                            </div>
+                                                                    </div>
                                                                 </div>
                                                         </div>	<!-- end col -->  
                                                         <div class="col-xs-12 col-sm-4">
@@ -159,7 +143,7 @@ use yii\widgets\ActiveForm;
                                                                         <?php endforeach ?>
                                                                 </select>
                                                         </div>	<!-- end col -->
-                                                        </div>	<!-- end panel -->                                                                   
+                                                    </div>	<!-- end panel -->                                                                   
                                                 <?php endforeach ?> 
                                                 </div>	<!-- end panel group -->
                                         <div class="order-steps-right">
@@ -421,49 +405,49 @@ use yii\widgets\ActiveForm;
                 </div> <!-- end col -->
         </div> <!-- end about-on-main -->
 
-        <div class="advance row">
-                <div class="col-xs-6 col-sm-4">
-                        <div class="advance-block">
-                                <div class="advance-header">
-                                        <img src="images/advance1.png" alt="Экспертность" class="img-responsive">
-                                        <h2>Экспертность</h2>
-                                </div>
-                                <p>Мы являемся экспертами в области срочных юридических проверок недвижимости</p>
-                        </div>
-                </div> <!-- end col -->
-                <div class="col-xs-6 col-sm-4">
-                        <div class="advance-block">
-                                <div class="advance-header">
-                                        <img src="images/advance2.png" alt="Опыт" class="img-responsive">
-                                        <h2>Опыт</h2>
-                                </div>
-                                <p>Более 10 лет мы реализуем срочную подготовку документов в сегменте недвижимости</p>
-                        </div>
-                </div> <!-- end col -->
-                <div class="col-xs-12 col-sm-4">
-                        <div class="advance-block">
-                                <div class="advance-header">
-                                        <img src="images/advance3.png" alt="Надежность" class="img-responsive">
-                                        <h2>Надежность</h2>
-                                </div>
-                                <p>Мы всегда находим компромисс при сложных проверках</p>
-                        </div>	
-                </div> <!-- end col -->
-        </div> <!-- end advance -->
+      <div class="advance row">
+         <div class="col-xs-6 col-sm-4">
+            <div class="advance-block">
+               <div class="advance-header">
+                  <img src="images/advance1.png" alt="Экспертность" class="img-responsive">
+                  <h2>Экспертность</h2>
+               </div>
+               <p>Мы являемся экспертами в области срочных юридических проверок недвижимости</p>
+            </div>
+         </div> <!-- end col -->
+         <div class="col-xs-6 col-sm-4">
+            <div class="advance-block">
+               <div class="advance-header">
+                  <img src="images/advance2.png" alt="Опыт" class="img-responsive">
+                  <h2>Опыт</h2>
+               </div>
+               <p>Более 10 лет мы реализуем срочную подготовку документов в сегменте недвижимости</p>
+            </div>
+         </div> <!-- end col -->
+         <div class="col-xs-12 col-sm-4">
+            <div class="advance-block">
+               <div class="advance-header">
+                  <img src="images/advance3.png" alt="Надежность" class="img-responsive">
+                  <h2>Надежность</h2>
+               </div>
+               <p>Мы всегда находим компромисс при сложных проверках</p>
+            </div>	
+         </div> <!-- end col -->
+      </div> <!-- end advance -->
 
-        <div id="banners-on-main" class="row">
-                <div class="col-sm-7">
-                        <a href="#"><img src="images/bg.png" alt="Баннер 1" width="100%" height="200"></a>
-                </div> <!-- end col -->
-                <div class="col-sm-5">
-                        <a href="#"><img src="images/bg.png" alt="Баннер 2" width="100%" height="200"></a>
-                </div> <!-- end col -->
-        </div> <!-- end banners-on-main -->
+      <div id="banners-on-main" class="row">
+         <div class="col-sm-7">
+            <a href="#"><img src="images/bg.png" alt="Баннер 1" width="100%" height="200"></a>
+         </div> <!-- end col -->
+         <div class="col-sm-5">
+            <a href="#"><img src="images/bg.png" alt="Баннер 2" width="100%" height="200"></a>
+         </div> <!-- end col -->
+      </div> <!-- end banners-on-main -->
 
-        </div> <!-- end row -->
-    </div> <!-- end container -->
+      </div> <!-- end row -->
+   </div> <!-- end container -->
 
-    <div id="testimonials-on-main" class="container-fluid hidden">
+   <div id="testimonials-on-main" class="container-fluid hidden">
             <div class="row">
                     <div class="col-sm-12 text-center">
                             Отзывы

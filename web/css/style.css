@@ -338,12 +338,9 @@ a:hover {
 
 /* блок под слайдером на главной */
 .for-whom {
-	/*display: inline-block;*/
 	margin: 2.5em 0;
-	border: 0px red solid;
 }
 .for-whom-block {
-	/*margin: 1em;*/
 	border: 1px #eee solid;
 }
 .for-whom-block:hover {
@@ -352,9 +349,6 @@ a:hover {
 .for-whom-header {
 	padding: 1em;
 	min-height: 210px;
-	border: 0px green solid;
-	/*background-color: #f9f9f9;
-	background-color: #F1E9DB;*/
 	border-bottom: 1px #eee solid;
 }
 .for-whom-header img {
@@ -666,12 +660,8 @@ a:hover {
 }
 .order-steps-left p,
 .order-steps-right p {
-	/*background-color: #A0A0A0;*/
 	background-color: #34AD00;
 	background-color: #F1E9DB;
-	/*border: 3px #fff solid;*/
-	/*background-color: #09d12a;*/
-	/*color: #fff;*/
 	padding: 1.6em 0.7em;
 	font-size: 0.9em;
 	display: inline-block;
@@ -999,15 +989,66 @@ footer #copyright a {
 		text-align: left;
 	}
 }
-
 @media (max-width:767px) {	/* смартфоны */
-    #banner-on-main h1{
+	body {
+		font-size: 90%;	/* % от medium (14px) */
+	}
+	#banner-on-main h1{
         font-size: 2.5em;
-    }
+	}
+	.for-whom-block {
+		margin-bottom: 2em;
+	}
+	.for-whom-header {
+		padding: 1em;
+		min-height: 0;
+	}
+	.for-whom-header img {
+		height: 100px;
+		display: block;
+		margin: 0 auto;
+	}
+	.for-whom-header h3 {
+		padding: 0.4em 0.5em;
+	}
+	.for-whom-block p {
+		min-height: 0;
+	}
+	.order-steps-left {
+		top:-12px;
+		left:-20px;
+	}
+	.order-steps-right {
+		top:30px;
+	}
+	.order-steps-left p,
+	.order-steps-right p {
+		font-size: 0.8em;
+	}
+	
+
 }
 
 @media (max-width:543px) {	/* самые маленькие */
-    #banner-on-main h1{
+	body {
+		font-size: 87%;	/* % от medium (14px) */
+	}
+	#banner-on-main header {
+		padding: 3em 1em 5em 1em;
+	}
+	#banner-on-main h1{
         font-size: 2em;
-    }
+	}
+	#services-checks-regions label,
+	#recommended-checks-regions label {
+		border: 1px #d0d0d0 solid;
+		border-radius: 0;
+		text-align: center;
+		width: 100%;
+		margin: 0.2em auto;
+	}
+	.service-block .panel-group .panel h4 {
+		text-align: center;
+		line-height: 1.2;
+	}
 }
