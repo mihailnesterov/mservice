@@ -406,7 +406,7 @@ use yii\widgets\ActiveForm;
         </div> <!-- end about-on-main -->
 
       <div class="advance row">
-         <div class="col-xs-6 col-sm-4">
+         <div class="col-xs-12 col-sm-4">
             <div class="advance-block">
                <div class="advance-header">
                   <img src="images/advance1.png" alt="Экспертность" class="img-responsive">
@@ -415,7 +415,7 @@ use yii\widgets\ActiveForm;
                <p>Мы являемся экспертами в области срочных юридических проверок недвижимости</p>
             </div>
          </div> <!-- end col -->
-         <div class="col-xs-6 col-sm-4">
+         <div class="col-xs-12 col-sm-4">
             <div class="advance-block">
                <div class="advance-header">
                   <img src="images/advance2.png" alt="Опыт" class="img-responsive">

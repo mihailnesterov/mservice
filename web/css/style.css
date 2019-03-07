@@ -279,14 +279,14 @@ a:hover {
 }
 #order .scan {
 	margin-bottom: 0.5em;
-	min-height: 150px;
+	min-height: 140px;
 }
 #order .scan img {
 	padding: 0.5em;
-	border: 1px #B2B2B2 solid;
+	border: 1px rgb(71, 49, 49) solid;
 	object-fit: cover;
 	width: 100%;
-	max-height: 220px;
+	max-height: 140px;
 }
 
 .btn-navigate {
