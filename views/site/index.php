@@ -123,7 +123,7 @@ use yii\widgets\ActiveForm;
                                                                                     <?php $imgCounter = 1; ?> 
                                                                                     <?php foreach ($scans as $key => $scan): ?>      
                                                                                             <?php if ( $scan->service->id == $service->service->id): ?>
-                                                                                            <div class="scan col-xs-12 col-sm-6 col-md-4" style="">
+                                                                                            <div class="scan col-xs-12 col-sm-6 col-md-4" data-scan-region="<?= $scan->region_id ?>">
                                                                                                     <a href="images/<?= $scan->img_path ?>" data-lightbox="image-<?= $imgCounter ?>"><img src="images/<?= $scan->img_path ?>" alt="Образец <?= $scan->id ?>" class="img-responsive"></a>
                                                                                             </div>
                                                                                             <?php endif ?>

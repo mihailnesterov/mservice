@@ -9,9 +9,11 @@ use Yii;
  *
  * @property int $id id изображения
  * @property int $service_id id услуги
+ * @property int $region_id id региона
  * @property string $img_path путь к изображению
  *
  * @property Services $service
+ * @property Regions $region
  */
 class Scans extends \yii\db\ActiveRecord
 {
@@ -29,10 +31,11 @@ class Scans extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['service_id', 'img_path'], 'required'],
-            [['service_id'], 'integer'],
+            [['service_id', 'region_id', 'img_path'], 'required'],
+            [['service_id', 'region_id'], 'integer'],
             [['img_path'], 'string', 'max' => 500],
             [['service_id'], 'exist', 'skipOnError' => true, 'targetClass' => Services::className(), 'targetAttribute' => ['service_id' => 'id']],
+            [['region_id'], 'exist', 'skipOnError' => true, 'targetClass' => Regions::className(), 'targetAttribute' => ['region_id' => 'id']],
         ];
     }
 
@@ -44,6 +47,7 @@ class Scans extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'service_id' => 'Service ID',
+            'region_id' => 'Region ID',
             'img_path' => 'Img Path',
         ];
     }
@@ -54,5 +58,13 @@ class Scans extends \yii\db\ActiveRecord
     public function getService()
     {
         return $this->hasOne(Services::className(), ['id' => 'service_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getRegion()
+    {
+        return $this->hasOne(Regions::className(), ['id' => 'region_id']);
     }
 }

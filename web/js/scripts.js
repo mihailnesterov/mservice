@@ -210,6 +210,17 @@
                 $(this).hide();
             }
         });
+        // показать сканы только для выбранного региона, в зависимости от значения data-scan-region 
+        $('.scan').each(function(){
+            var scanRegionId = $(this).data('scanRegion');
+            if (scanRegionId === parseInt(selectedRegionId)) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+        
+
         // очистить корзину и таблицу на шаге 3, обнулить "Итого", если выбран другой регион
         $('#cart-list').each(function() {
             $(this).find('li').remove();
@@ -228,7 +239,7 @@
     });
     
     // не используется!!! всё в переключателе выше...
-    $('input[name="selectRegion1"]').change(function(){ 
+    $('input[name="-----selectRegion1"]').change(function(){ 
         // вывести название региона в заголовки на шаге 2 и 3
         var selectedRegion = $('input[name="selectRegion"]:checked').val();
         $('#region-name-step2').html(selectedRegion);
