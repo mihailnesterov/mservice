@@ -312,9 +312,9 @@
             // добавить строку с услугой
             $('#table-order-step3').append(
                     '<tr class="region-tr" region="'+ regionID +'">' + 
-                    '<td class="counter"></td>' +
+                    '<td class="counter text-center"></td>' +
                     '<td><span class="service-name">' + $(this.parentNode.parentNode).find('a').html() + '</span> <i class="fa fa-close" title="Удалить"></i></td>' +
-                    '<td class="sum">' + $(this).val() + '</td>' + 
+                    '<td class="sum text-center">' + $(this).val() + '</td>' + 
                     '</tr>'
             );
             // добавить строку "Итого"
@@ -322,7 +322,7 @@
                     '<tr id="total-tr">' + 
                     '<td></td>' +
                     '<td>Итого:</td>' +
-                    '<td><span class="step3-sum">0</span> <i class="fa fa-rub"></i></td>' + 
+                    '<td class="text-center"><span class="step3-sum">0</span> <i class="fa fa-rub"></i></td>' + 
                     '</tr>'
             );
             // пересчитываем строки в таблице

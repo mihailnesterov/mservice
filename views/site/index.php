@@ -157,7 +157,9 @@ use yii\widgets\ActiveForm;
                         <div role="tabpanel" class="tab-pane" id="step3">
 
                                 <div id="order-payment">
-                                        <a id="go-back-step2" href="#select-services" data-toggle="tab"><i class="fa fa-chevron-left"></i> К выбору услуг</a>
+                                        <div class="go-back-block">
+                                                <a id="go-back-step2" href="#select-services" data-toggle="tab"><i class="fa fa-chevron-left"></i> К выбору услуг</a>
+                                        </div>
                                         <h2 class="text-center">Оформить заказ</h2>
                                         <hr>
 
@@ -168,12 +170,14 @@ use yii\widgets\ActiveForm;
                                                                         <div class="col-sm-8">
                                                                                 <h4>Общая стоимость: <span class="step3-sum">0</span> <i class="fa fa-rub"></i> (<span id="region-name-step3"></span>)</h4>
                                                                         </div>
-                                                                        <h4 class="panel-title col-sm-4 text-right">
-                                                                                <a role="button" data-toggle="collapse" data-parent="#order-step3" href="#collapse-order-table" aria-expanded="true" aria-controls="collapse-order-table">
-                                                                                Подробности заказа
-                                                                                </a> 
-                                                                                <i class="fa fa-shopping-basket"></i>
-                                                                        </h4>
+                                                                        <div class="panel-title col-sm-4 text-right">
+                                                                                <h4>
+                                                                                        <a role="button" data-toggle="collapse" data-parent="#order-step3" href="#collapse-order-table" aria-expanded="true" aria-controls="collapse-order-table">
+                                                                                                Подробности заказа
+                                                                                        </a> 
+                                                                                        <i class="fa fa-shopping-basket"></i>
+                                                                                </h4>
+                                                                        </div>
                                                                 </div>	<!-- end row -->
                                                         </div>	<!-- end panel-heading -->
                                                         <div id="collapse-order-table" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-order-step3">
@@ -181,9 +185,9 @@ use yii\widgets\ActiveForm;
                                                                 <table id="table-order-step3" class="table table-responsive table-striped table-bordered">
                                                                         <thead>
                                                                         <tr>
-                                                                                <th>№</th>
-                                                                                <th>Наименование</th>
-                                                                                <th>Цена, руб.</th>
+                                                                                <th class="text-center">№</th>
+                                                                                <th class="text-center">Услуга</th>
+                                                                                <th class="text-center">Цена, руб.</th>
                                                                         </tr>
                                                                         </thead>
                                                                         <tbody>
@@ -207,7 +211,7 @@ use yii\widgets\ActiveForm;
                                         <?php $form = ActiveForm::begin([
                                                 'id'  =>  'order-service-form',
                                         ]); ?>
-                                                <div class="col-xs-12 col-xs-offset-2 col-md-6 col-md-offset-3">
+                                                <div class="col-xs-12 col-md-6 col-md-offset-3">
                                                 <div class="form-group">
                                                         <div class="input-group">
                                                                 <div class="input-group-addon"><i class="fa fa-map-marker fa-2x" aria-hidden="true"></i></div>
@@ -232,8 +236,6 @@ use yii\widgets\ActiveForm;
                                                                 <input type="text" class="form-control input-lg" placeholder="Контактный телефон *" name="client-phone" id="client-phone" value=<?= $clientPhone?> required />
                                                         </div>
                                                 </div>
-                                                <!--</div>--> <!-- end col -->
-                                                <!--<div class="col-md-6">-->
                                                 <div class="form-group hidden">
                                                         <div class="input-group">
                                                                 <div class="input-group-addon"><i class="fa fa-address-card-o fa-2x" aria-hidden="true"></i></div>

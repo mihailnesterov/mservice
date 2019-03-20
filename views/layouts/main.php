@@ -112,7 +112,7 @@
 										<span class="icon-bar"></span>
 										<span class="icon-bar"></span>
 									</button>
-									<a class="navbar-brand visible-xs" href="#">M | SERVICE</a>
+									<a class="navbar-brand visible-xs" href="<?= Yii::$app->urlManager->createUrl('/') ?>">M | SERVICE</a>
 								</div>
 								<div id="navbar" class="navbar-collapse collapse">
 									<ul class="nav navbar-nav">

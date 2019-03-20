@@ -303,6 +303,7 @@ a:hover {
 	bottom: 0;
 	left: 0;
 	width: 100%;
+	z-index: 998;
 	display: none;
 }
 #cart {
@@ -316,6 +317,7 @@ a:hover {
 	list-style-type: decimal;
 	font-size: 1.2em;
 	margin-left: 2em;
+	margin-bottom: 1em;
 }
 #cart-list i {
 	color: #D9534F;
@@ -649,14 +651,14 @@ a:hover {
 	top:0;
 	left:0;
 	margin: 0;
-	z-index: 999;
+	z-index: 997;
 }
 .order-steps-right {
 	position: absolute;
 	top:0;
 	right:0;
 	margin: 0;
-	z-index: 999;
+	z-index: 997;
 }
 .order-steps-left p,
 .order-steps-right p {
@@ -948,6 +950,7 @@ footer #copyright a {
 	color:#fff;
 	font-size:1.7em;
 	opacity: 0.95;
+	z-index: 999;
 	
 	-webkit-border-radius: 30px;
     -moz-border-radius: 30px;
@@ -1023,15 +1026,20 @@ footer #copyright a {
 	}
 	.order-steps-left p,
 	.order-steps-right p {
-		font-size: 0.8em;
+		font-size: 0.9em;
 	}
-	
+	#cart {
+		padding-bottom: 5em;
+	}
+	#order-payment .go-back-block {
+		margin-bottom: 1em;
+	}
 
 }
 
 @media (max-width:543px) {	/* самые маленькие */
 	body {
-		font-size: 87%;	/* % от medium (14px) */
+		font-size: 70%;	/* % от medium (14px) */
 	}
 	#banner-on-main header {
 		padding: 3em 1em 5em 1em;
@@ -1050,5 +1058,11 @@ footer #copyright a {
 	.service-block .panel-group .panel h4 {
 		text-align: center;
 		line-height: 1.2;
+	}
+	.order-steps-left {
+		left:-35px;
+	}
+	.order-steps-right {
+		right:-15px;
 	}
 }

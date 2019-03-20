@@ -86,7 +86,7 @@ use yii\widgets\Breadcrumbs;
                                                                                         <?php $imgCounter = 1; ?> 
                                                                                             <?php foreach ($scans as $key => $scan): ?>      
                                                                                                 <?php if ( $scan->service->id == $service->service->id): ?>
-                                                                                                    <div class="scan col-xs-12 col-sm-6 col-md-4">
+                                                                                                    <div class="scan col-xs-12 col-sm-6 col-md-4" data-scan-region="<?= $scan->region_id ?>">
                                                                                                         <a href="images/<?= $scan->img_path ?>" data-lightbox="image-<?= $imgCounter ?>"><img src="images/<?= $scan->img_path ?>" alt="Образец <?= $scan->id ?>" class="img-responsive"></a>
                                                                                                     </div>
                                                                                             <?php endif ?>
@@ -118,9 +118,11 @@ use yii\widgets\Breadcrumbs;
                                 <div role="tabpanel" class="tab-pane" id="step3">
 
                                         <div id="order-payment">
-                                                <a id="go-back-step2" href="#select-services" data-toggle="tab"><i class="fa fa-chevron-left"></i> К услугам</a>
-                                                <h2 class="text-center">Оформить заказ</h2>
-                                                <hr>
+                                            <div class="go-back-block">
+                                                <a id="go-back-step2" href="#select-services" data-toggle="tab"><i class="fa fa-chevron-left"></i> К выбору услуг</a>
+                                            </div>
+                                            <h2 class="text-center">Оформить заказ</h2>
+                                            <hr>
 
                                                 <div class="panel-group" id="order-step3" role="tablist" aria-multiselectable="true">
                                                         <div class="panel panel-default">
@@ -142,9 +144,9 @@ use yii\widgets\Breadcrumbs;
                                                                             <table id="table-order-step3" class="table table-responsive table-striped table-bordered">
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>№</th>
-                                                                                        <th>Наименование</th>
-                                                                                        <th>Цена, руб.</th>
+                                                                                        <th class="text-center">№</th>
+                                                                                        <th class="text-center">Услуга</th>
+                                                                                        <th class="text-center">Цена, руб.</th>
                                                                                     </tr>
                                                                                 </thead>
                                                                                 <tbody>
@@ -168,7 +170,7 @@ use yii\widgets\Breadcrumbs;
                                                     <?php $form = ActiveForm::begin([
                                                         'id'  =>  'order-service-form',
                                                     ]); ?>
-                                                        <div class="col-xs-12 col-xs-offset-2 col-md-6 col-md-offset-3">
+                                                        <div class="col-xs-12 col-md-6 col-md-offset-3">
                                                             <div class="form-group">
                                                                 <div class="input-group">
                                                                     <div class="input-group-addon"><i class="fa fa-map-marker fa-2x" aria-hidden="true"></i></div>
