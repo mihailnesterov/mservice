@@ -11,6 +11,7 @@ use Yii;
  * @property int $service_id id услуги
  * @property int $region_id id региона
  * @property string $img_path путь к изображению
+ * @property string $description подпись к изображению
  *
  * @property Services $service
  * @property Regions $region
@@ -34,6 +35,7 @@ class Scans extends \yii\db\ActiveRecord
             [['service_id', 'region_id', 'img_path'], 'required'],
             [['service_id', 'region_id'], 'integer'],
             [['img_path'], 'string', 'max' => 500],
+            [['description'], 'string', 'max' => 512],
             [['service_id'], 'exist', 'skipOnError' => true, 'targetClass' => Services::className(), 'targetAttribute' => ['service_id' => 'id']],
             [['region_id'], 'exist', 'skipOnError' => true, 'targetClass' => Regions::className(), 'targetAttribute' => ['region_id' => 'id']],
         ];
@@ -49,6 +51,7 @@ class Scans extends \yii\db\ActiveRecord
             'service_id' => 'Service ID',
             'region_id' => 'Region ID',
             'img_path' => 'Img Path',
+            'description' => 'Description',
         ];
     }
 

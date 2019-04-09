@@ -68,7 +68,7 @@
 							<div id="logo" class="col-sm-5 col-md-3">
 								<?= Html::a(
 									Html::img(
-										'images/logo.jpg',
+										'images/logo.png',
 										[
 											'alt' => 'logo',
 											'class' => 'img-responsive'

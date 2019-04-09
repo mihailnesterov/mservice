@@ -345,7 +345,7 @@
             $.gritter.add({
                     title: 'Услуга добавлена:',
                     text: $(this.parentNode.parentNode).find('a').html() + '<br>' + 'Цена: ' + $(this).val() + ' руб.',
-                    image: 'images/logo.jpg',
+                    image: 'images/logo.png',
                     sticky: false,
                     position: 'top-right',
                     time: '5000'
@@ -389,7 +389,7 @@
                 $.gritter.add({
                         title: 'Корзина пуста',
                         text: 'Не выбрано ни одной услуги',
-                        image: 'images/logo.jpg',
+                        image: 'images/logo.png',
                         sticky: false,
                         position: 'top-right',
                         time: '5000'
@@ -624,7 +624,7 @@
                     $.gritter.add({
                         title: 'Подписка оформлена!',
                         text: 'Ваш email добавлен в базу подписчиков',
-                        image: 'images/logo.jpg',
+                        image: 'images/logo.png',
                         sticky: false,
                         time: '3000'
                     });
@@ -675,7 +675,7 @@
                 $.gritter.add({
                         title: data + ', Ваш заказ получен!',
                         text: 'В ближайшее время мы свяжемся с вами',
-                        image: 'images/logo.jpg',
+                        image: 'images/logo.png',
                         sticky: false,
                         time: '3000'
                     });
@@ -739,7 +739,7 @@
                 $.gritter.add({
                         title: data + ', Ваш заказ получен!',
                         text: 'В ближайшее время мы свяжемся с вами',
-                        image: 'images/logo.jpg',
+                        image: 'images/logo.png',
                         sticky: false,
                         time: '3000'
                     });

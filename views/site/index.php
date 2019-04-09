@@ -124,7 +124,8 @@ use yii\widgets\ActiveForm;
                                                                                     <?php foreach ($scans as $key => $scan): ?>      
                                                                                             <?php if ( $scan->service->id == $service->service->id): ?>
                                                                                             <div class="scan col-xs-12 col-sm-6 col-md-4" data-scan-region="<?= $scan->region_id ?>">
-                                                                                                    <a href="images/<?= $scan->img_path ?>" data-lightbox="image-<?= $imgCounter ?>"><img src="images/<?= $scan->img_path ?>" alt="Образец <?= $scan->id ?>" class="img-responsive"></a>
+                                                                                                <a href="images/<?= $scan->img_path ?>" data-lightbox="image-<?= $imgCounter ?>"><img src="images/<?= $scan->img_path ?>" alt="Образец <?= $scan->id ?>" class="img-responsive"></a>
+                                                                                                <p class="text-center"><?= $scan->description ?></p>
                                                                                             </div>
                                                                                             <?php endif ?>
                                                                                             <?php $imgCounter++; ?>
@@ -314,7 +315,7 @@ use yii\widgets\ActiveForm;
                         
                         <div id="about-on-main-right">
                                 <div class="about-services row">
-                                        <div class="col-xs-3">
+                                        <div class="col-xs-12 col-sm-3 text-center">
                                                 <div class="img-block">
                                                 <?= Html::a(
                                                         Html::img(
@@ -327,13 +328,13 @@ use yii\widgets\ActiveForm;
                                                 )?>
                                                 </div>
                                         </div>
-                                        <div class="text-block col-xs-9">
+                                        <div class="text-block col-xs-12 col-sm-9">
                                                 <?= Html::a('<h3>ЮРИДИЧЕСКОЕ ЗАКЛЮЧЕНИЕ</h3>','@web/services?id=13') ?>
                                                 <p>Заключение по объектам недвижимости, составленное аккредитованным сотрудником</p>
                                         </div>
                                 </div>
                                 <div class="about-services row">
-                                        <div class="col-xs-3">
+                                        <div class="col-xs-12 col-sm-3 text-center">
                                                 <div class="img-block">
                                                         <?= Html::a(
                                                                 Html::img(
@@ -346,24 +347,24 @@ use yii\widgets\ActiveForm;
                                                         )?>
                                                 </div>
                                         </div>
-                                        <div class="text-block col-xs-9">
+                                        <div class="text-block col-xs-12 col-sm-9">
                                                 <?= Html::a('<h3>КОМПЛЕКСНАЯ ПРОВЕРКА ДОКУМЕНТОВ</h3>','@web/complexes') ?>
                                                 <p>Комплект необходимых справок и документов для проведения сделок с недвижимостью</p>
                                         </div>
                                 </div>
                                 <div class="about-services row">
-                                        <div class="col-xs-3">
+                                        <div class="col-xs-12 col-sm-3 text-center">
                                                 <div class="img-block">
                                                         <img src="images/check.png" alt="Проверка подлинности документов">
                                                 </div>
                                         </div>
-                                        <div class="text-block col-xs-9">
+                                        <div class="text-block col-xs-12 col-sm-9">
                                                 <h3>ПРОВЕРКА ПОДЛИННОСТИ ДОКУМЕНТОВ</h3>
                                                 <p>Проверка официальных документов, нотариально заверенных документов, предоставленных справок</p>
                                         </div>
                                 </div>
                                 <div class="about-services row">
-                                        <div class="col-xs-3">
+                                        <div class="col-xs-12 col-sm-3 text-center">
                                                 <div class="img-block">
                                                         <?= Html::a(
                                                                 Html::img(
@@ -376,29 +377,29 @@ use yii\widgets\ActiveForm;
                                                         )?>
                                                 </div>
                                         </div>
-                                        <div class="text-block col-xs-9">
+                                        <div class="text-block col-xs-12 col-sm-9">
                                                 <?= Html::a('<h3>ПОДГОТОВКА АРХИВНЫХ ДОКУМЕНТОВ</h3>','@web/services?id=11') ?>
                                                 <p>Срочная подготовка документов из Архива Росреестра</p>
                                         </div>
                                 </div>
                                 <div class="about-services row">
-                                        <div class="col-xs-3">
+                                        <div class="col-xs-12 col-sm-3 text-center">
                                                 <div class="img-block">
                                                         <img src="images/registration.png" alt="Регистрация договоров">
                                                 </div>
                                         </div>
-                                        <div class="text-block col-xs-9">
+                                        <div class="text-block col-xs-12 col-sm-9">
                                                 <h3>РЕГИСТРАЦИЯ ДОГОВОРОВ В РОСРЕЕСТРЕ</h3>
                                                 <p>Регистрация договоров без задержек и очередей</p>
                                         </div>
                                 </div>
                                 <div class="about-services row">
-                                        <div class="col-xs-3">
+                                        <div class="col-xs-12 col-sm-3 text-center">
                                                 <div class="img-block">
                                                         <img src="images/capacity.png" alt="Проверка дееспособности лиц">
                                                 </div>
                                         </div>
-                                        <div class="text-block col-xs-9">
+                                        <div class="text-block col-xs-12 col-sm-9">
                                                 <h3>ПРОВЕРКА ДЕЕСПОСОБНОСТИ ЛИЦ</h3>
                                                 <p>Проверка физических лиц на возможность осуществления сделок с недвижимостью</p>
                                         </div>
