@@ -286,10 +286,12 @@ a:hover {
 	border: 1px rgb(71, 49, 49) solid;
 	object-fit: cover;
 	width: 100%;
+	min-height: 140px;
 	max-height: 140px;
 }
 #order .scan p {
 	padding: 0.5em;
+	height: 50px;
 }
 
 .btn-navigate {
