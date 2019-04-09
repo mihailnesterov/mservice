@@ -1055,6 +1055,13 @@ footer #copyright a {
 	#banner-on-main h1{
         font-size: 2em;
 	}
+	#recommended {
+		padding: 1.5em;
+		margin: 1em 0.5em;
+	}
+	#recommended .recommended-block {
+		padding: 1.5em 1em;
+	}
 	#services-checks-regions label,
 	#recommended-checks-regions label {
 		border: 1px #d0d0d0 solid;

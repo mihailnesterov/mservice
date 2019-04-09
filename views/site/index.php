@@ -222,19 +222,31 @@ use yii\widgets\ActiveForm;
                                                 <div class="form-group">
                                                         <div class="input-group">
                                                                 <div class="input-group-addon"><i class="fa fa-user fa-2x" aria-hidden="true"></i></div>
-                                                                <input type="text" class="form-control input-lg" placeholder="Ваше имя *" name="client-name" id="client-name" value=<?= $clientName?> required />
+                                                                <?php if ( $clientName != '' ): ?>
+                                                                        <input type="text" class="form-control input-lg" placeholder="Ваше имя *" name="client-name" id="client-name" value=<?= $clientName?> required />
+                                                                <?php else: ?>
+                                                                        <input type="text" class="form-control input-lg" placeholder="Ваше имя *" name="client-name" id="client-name" required />
+                                                                <?php endif ?>
                                                         </div>
                                                 </div>
                                                 <div class="form-group">
                                                         <div class="input-group">
                                                                 <div class="input-group-addon"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></div>
-                                                                <input type="text" class="form-control input-lg" placeholder="Электронный адрес: *" name="client-email" id="client-email" value=<?= $clientEmail?> required />
+                                                                <?php if ( $clientEmail != '' ): ?>
+                                                                        <input type="text" class="form-control input-lg" placeholder="Электронный адрес: *" name="client-email" id="client-email" value=<?= $clientEmail?> required />
+                                                                <?php else: ?>
+                                                                        <input type="text" class="form-control input-lg" placeholder="Электронный адрес: *" name="client-email" id="client-email" required />
+                                                                <?php endif ?>
                                                         </div>
                                                 </div>
                                                 <div class="form-group">
                                                         <div class="input-group">
                                                                 <div class="input-group-addon"><i class="fa fa-mobile fa-2x" aria-hidden="true"></i></div>
-                                                                <input type="text" class="form-control input-lg" placeholder="Контактный телефон *" name="client-phone" id="client-phone" value=<?= $clientPhone?> required />
+                                                                <?php if ( $clientPhone != '' ): ?>
+                                                                        <input type="text" class="form-control input-lg" placeholder="Контактный телефон *" name="client-phone" id="client-phone" value=<?= $clientPhone?> required />  
+                                                                <?php else: ?>
+                                                                        <input type="text" class="form-control input-lg" placeholder="Контактный телефон *" name="client-phone" id="client-phone" required />
+                                                                <?php endif ?>
                                                         </div>
                                                 </div>
                                                 <div class="form-group hidden">
