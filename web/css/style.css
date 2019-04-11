@@ -289,9 +289,12 @@ a:hover {
 	min-height: 140px;
 	max-height: 140px;
 }
+#order .scan img:hover {
+	opacity: 0.8;
+}
 #order .scan p {
 	padding: 0.5em;
-	height: 50px;
+	height: 70px;
 }
 
 .btn-navigate {
