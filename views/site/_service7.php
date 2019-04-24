@@ -10,14 +10,9 @@
         
         <div class="content-block col-sm-12">
             <h2 class="text-center bg-success">Выписка из домовой книги</h2>
-            <p>Выписка из домовой книги - документ, которой может находиться как в районом паспортном столе, МФЦ, так и в обслуживающей организацией.</p>
+            <p>Архивная выписка из домовой книги - документ, которой может находиться в районом паспортном столе, МФЦ или в обслуживающей организации.</p>
             <p>Выписка из домовой книги показывает, кто в данный момент зарегистрирован по запрашиваемому адресу.</p>
             <p>* - Окончательная цена может измениться в зависимости от удаленности объекта от МКАД.</p>
-            <ul>                  
-                <li>поэтажный план</li>
-                <li>экспликация</li>
-                <li>технический паспорт помещения</li>
-            </ul>
         </div> <!-- end content-block col -->
         
         <div class="content-block col-sm-12">
@@ -31,7 +26,6 @@
                 <li>Зарегистрированное раннее лицо по домашнему адресу являются несовершеннолетним</li>
             </ul>
             <p>В данном случае дети должны быть учтены при приватизации квартиры.</p>
-            <p>Для избегания оспаривания нарушенных прав после сделки с недвижимостью необходимо ознакомиться с архивной выпиской паспортного стола.</p>
         </div> <!-- end content-block col -->
         
         <div class="content-block col-sm-12">
@@ -45,7 +39,12 @@
                 <tr>
                     <td class="text-center">1 день</td>
                     <td class="text-center">4000</td>
-                    <td class="text-center">от 6500 руб.</td>
+                    <td class="text-center">-</td>
+                </tr>
+                <tr>
+                    <td class="text-center">3-5 рабочих дней</td>
+                    <td class="text-center">-</td>
+                    <td class="text-center">от 7500 руб.</td>
                 </tr>
             </table>
         </div> <!-- end content-block col -->
@@ -55,15 +54,6 @@
             <p>Необходимость в получении выписки из домовой книги объясняется следующими обстоятельствами - перед любой сделкой с квартирой данная выписка обязательна для предъявления покупателю или его представителю для понимания о количестве зарегистрированных, о присутствии несовершеннолетних.</p>
             <p>Расширенная выписка из домой книги называется иначе - Архивная выписка из домовой книги. Структурно расширенная выписка из домовой книги совпадает с обычной выпиской.</p>
             <p>Принципиальное отличие - Расширенная выписка из домовой книги содержит в себе сведения о зарегистрированных и выбывших ранее людях, адресах выбытия.</p>
-        </div> <!-- end content-block col -->
-        
-        <div class="content-block col-sm-12">
-            <h2 class="text-center">Пример выписки из домовой книги</h2>
-            <div class="row">
-                <div class="col-sm-3 col-sm-offset-5">
-                    <a href="#"><img src="images/samples/dom_kniga/arhival.jpg" alt="Пример выписки из домовой книги" class="img-responsive"></a>
-                </div>
-            </div> <!-- end row -->
         </div> <!-- end content-block col -->
         
         <div class="content-block col-sm-12">
@@ -92,23 +82,18 @@
                 </tr>
                 <tr>
                     <td class="text-center">2</td>
-                    <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=3') ?>">Выписка из ЕГРЮЛ</a></td>
-                    <td class="text-center">от 1500 руб.</td>
+                    <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=10') ?>">Справка из ЦАБ</a></td>
+                    <td class="text-center">1500 руб.</td>
                 </tr>
-                <!--<tr>
-                    <td class="text-center">2</td>
-                    <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=3') ?>">Кадастровый паспорт</a></td>
-                    <td class="text-center">от 4000 руб.</td>
-                </tr>-->
                 <tr>
                     <td class="text-center">3</td>
-                    <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=6') ?>">Документы БТИ</a></td>
-                    <td class="text-center">от 10000 руб.</td>
+                    <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=5') ?>">История перехода права</a></td>
+                    <td class="text-center">1500 руб.</td>
                 </tr>
                 <tr>
                     <td class="text-center">4</td>
-                    <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=8') ?>">Справка из ДГИ(ДЖП)</a></td>
-                    <td class="text-center">от 3000 руб.</td>
+                    <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=6') ?>">Документы БТИ</a></td>
+                    <td class="text-center">от 10000 руб.</td>
                 </tr>
             </table>
         </div> <!-- end content-block col -->

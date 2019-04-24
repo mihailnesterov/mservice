@@ -11,7 +11,7 @@
         <div class="content-block col-sm-12">
             <h2 class="text-center bg-success">Справка из ЦАБ</h2>
             <p>ЦАБ (ЦАСБ) — центральное адресно-справочное бюро</p>
-            <p>Справка ЦАБ (ЦАСБ) по объекту - технический документ, содержащий в себе информацию зарегистрированных лиц по запрашиваемому адресу объекта недвижимости.</p>
+            <p>Справка ЦАБ (ЦАСБ) по объекту - технический документ, содержащий в себе информацию о зарегистрированных лицах по запрашиваемому адресу объекта недвижимого имущества (квартире, дому).</p>
             <p>Справка ЦАБ (ЦАСБ) по субъекту - технический документ, содержащий в себе информацию по адресу регистрации запрашиваемого лица.</p>
         </div> <!-- end content-block col -->
         
@@ -25,13 +25,13 @@
                 </tr>
                 <tr>
                     <td class="text-center">1 день</td>
-                    <td class="text-center">2999</td>
-                    <td class="text-center">2499</td>
+                    <td class="text-center">2000 (объект) <br> 2000 (субъект)</td>
+                    <td class="text-center">2000 (объект) <br> 2000 (субъект)</td>
                 </tr>
                 <tr>
                     <td class="text-center">2 дня</td>
-                    <td class="text-center">2999</td>
-                    <td class="text-center">2499</td>
+                    <td class="text-center">1500 (объект) <br> 1500 (субъект)</td>
+                    <td class="text-center">1500 (объект) <br> 1500 (субъект)</td>
                 </tr>
             </table>
         </div> <!-- end content-block col -->
@@ -67,11 +67,6 @@
                     <th width="65%" class="text-center">Название услуги</th>
                     <th class="text-center">Цена</th>
                 </tr>
-                <!--<tr>
-                    <td class="text-center">1</td>
-                    <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=5') ?>">Кадастровый паспорт</a></td>
-                    <td class="text-center">от 1500 руб.</td>
-                </tr>-->
                 <tr>
                     <td class="text-center">1</td>
                     <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=5') ?>">История перехода права</a></td>
@@ -92,7 +87,7 @@
                 <li>Гарантированный срок</li>
                 <li>Точные сведения из ЦАБ</li>
                 <li>Вы экономите ваше время</li>
-                <li>Вы получаете справку из ЦАБ точно в руки</li>
+                <li>Вы получаете справку из ЦАБ на электронную почту</li>
             </ul>
         </div> <!-- end content-block col -->
         
