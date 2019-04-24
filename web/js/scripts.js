@@ -237,35 +237,6 @@
     $(document).ready(function(){
         $('#services-checks-regions').find('#region-1').attr('checked', true).change();
     });
-    
-    // не используется!!! всё в переключателе выше...
-    $('input[name="-----selectRegion1"]').change(function(){ 
-        // вывести название региона в заголовки на шаге 2 и 3
-        var selectedRegion = $('input[name="selectRegion"]:checked').val();
-        $('#region-name-step2').html(selectedRegion);
-        $('#region-name-step3').html(selectedRegion);     
-        // показать услуги только для выбранного региона, остальные скрыть
-        // регионы сравниваются по атрибуту region="..."
-        var selectedRegionId = $('input[name="selectRegion"]:checked').attr('region');
-        $('#order-select-services').find('.panel').each(function(){
-            var serviceId = $(this).attr('region');
-            if (serviceId === selectedRegionId) {
-                $(this).show();
-            } else {
-                $(this).hide();
-            }
-        });
-        // очистить корзину и таблицу на шаге 3, обнулить "Итого", если выбран другой регион
-        $('#cart-list').each(function() {
-            $(this).find('li').remove();
-        });
-        $('#table-order-step3').find('.counter').each(function() {
-            $(this.parentNode).remove();
-        });
-        $('#sum').html('0');
-        $('.step3-sum').html('0');
-        $('#cart-empty-text').show();
-    }); // не используется!!!
 
     // добавить услугу в корзину
     $('.select-price').on('change', function () {

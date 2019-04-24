@@ -176,8 +176,8 @@ class SiteController extends Controller
         $regions = Regions::find()->orderby(['id'=>SORT_ASC])->all();
         $services = Services::find()->orderby(['sort'=>SORT_ASC])->all();
         $servicesInRegion = ServiceInRegion::find()->orderby(['sort'=>SORT_ASC])->all();
-        $prices = Prices::find()->orderby(['id'=>SORT_ASC])->all();
-        $scans = Scans::find()->orderby(['id'=>SORT_ASC])->all();
+        $prices = Prices::find()->orderby(['sort'=>SORT_ASC])->all();
+        $scans = Scans::find()->where(['is_active'=>1])->orderby(['id'=>SORT_ASC])->all();
 
         $clientName = '';
         $clientEmail = '';
@@ -222,8 +222,8 @@ class SiteController extends Controller
         $model = $this->findServiceModel($id);
         $regions = Regions::find()->orderby(['id'=>SORT_ASC])->all();
         $servicesInRegion = ServiceInRegion::find()->orderby(['id'=>SORT_ASC])->all();
-        $prices = Prices::find()->orderby(['id'=>SORT_ASC])->all();
-        $scans = Scans::find()->orderby(['id'=>SORT_ASC])->all();
+        $prices = Prices::find()->orderby(['sort'=>SORT_ASC])->all();
+        $scans = Scans::find()->where(['is_active'=>1])->orderby(['id'=>SORT_ASC])->all();
 
         $clientName = '';
         $clientEmail = '';

@@ -81,8 +81,6 @@ use yii\widgets\ActiveForm;
                                         <h2 class="text-center">Как с Вами связаться:</h2>
                                         <hr>                                        
                                             <div class="row">
-
-                                                
                                                 <?php $form = ActiveForm::begin([
                                                         'id'  =>  'order-complex-form',
                                                 ]); ?>

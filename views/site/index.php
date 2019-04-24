@@ -23,7 +23,6 @@ use yii\widgets\ActiveForm;
     </div> <!-- end container-fluid -->
 
     <div class="container">
-      <div class="row1">
          <div class="for-whom row">
             <div class="col-xs-12 col-sm-6 col-md-3">
                <div class="for-whom-block text-center">
@@ -119,7 +118,7 @@ use yii\widgets\ActiveForm;
                                                                     <div class="panel-body">
                                                                             <p><?= $service->service->description ?></p>
                                                                             <div class="row">
-                                                                                    <h4 class="col-xs-12">Образец:</h4>
+                                                                                    <h4 class="col-xs-12">Образцы:</h4>
                                                                                     <?php $imgCounter = 1; ?> 
                                                                                     <?php foreach ($scans as $key => $scan): ?>      
                                                                                             <?php if ( $scan->service->id == $service->service->id): ?>
@@ -168,7 +167,7 @@ use yii\widgets\ActiveForm;
                                                 <div class="panel panel-default">
                                                         <div class="panel-heading" role="tab" id="heading-order-step3">
                                                                 <div class="row">
-                                                                        <div class="col-sm-8">
+                                                                        <div class="hidden-xs col-sm-8">
                                                                                 <h4>Общая стоимость: <span class="step3-sum">0</span> <i class="fa fa-rub"></i> (<span id="region-name-step3"></span>)</h4>
                                                                         </div>
                                                                         <div class="panel-title col-sm-4 text-right">
@@ -458,8 +457,6 @@ use yii\widgets\ActiveForm;
             <a href="#"><img src="images/bg.png" alt="Баннер 2" width="100%" height="200"></a>
          </div> <!-- end col -->
       </div> <!-- end banners-on-main -->
-
-      </div> <!-- end row -->
    </div> <!-- end container -->
 
    <div id="testimonials-on-main" class="container-fluid hidden">

@@ -82,7 +82,7 @@ use yii\widgets\Breadcrumbs;
                                                                             <div class="panel-body">
                                                                                 <p><?= $service->service->description ?></p>
                                                                                 <div class="row scan-block">
-                                                                                        <h4 class="col-xs-12">Образец:</h4>
+                                                                                        <h4 class="col-xs-12">Образцы:</h4>
                                                                                         <?php $imgCounter = 1; ?> 
                                                                                             <?php foreach ($scans as $key => $scan): ?>      
                                                                                                 <?php if ( $scan->service->id == $service->service->id): ?>
@@ -129,7 +129,7 @@ use yii\widgets\Breadcrumbs;
                                                         <div class="panel panel-default">
                                                                 <div class="panel-heading" role="tab" id="heading-order-step3">
                                                                         <div class="row">
-                                                                                <div class="col-sm-8">
+                                                                                <div class="hidden-xs col-sm-8">
                                                                                         <h4>Общая стоимость: <span class="step3-sum">0</span> <i class="fa fa-rub"></i> (<span id="region-name-step3"></span>)</h4>
                                                                                 </div>
                                                                                 <h4 class="panel-title col-sm-4 text-right">
