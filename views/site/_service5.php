@@ -55,10 +55,15 @@
                     <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=1') ?>">Выписка из ЕГРН без печати/с печатью</a></td>
                     <td class="text-center">1000/4000 руб.</td>
                 </tr>
-                <tr>
+                <!--<tr>
                     <td class="text-center">2</td>
                     <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=7') ?>">Расширенная выписка из домовой книги</a></td>
                     <td class="text-center">от 4000 руб.</td>
+                </tr>-->
+                <tr>
+                    <td class="text-center">2</td>
+                    <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=10') ?>">Справка из ЦАБ</a></td>
+                    <td class="text-center">2000 руб.</td>
                 </tr>
                 <tr>
                     <td class="text-center">3</td>

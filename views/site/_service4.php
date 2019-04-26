@@ -9,7 +9,7 @@
     <div class="row">
         
         <div class="content-block col-sm-12">
-            <h2 class="text-center bg-success">Информация предоставляется на любое физическое лицо</h2>
+            <h2 class="text-center bg-success">Информация предоставляется на физическое лицо</h2>
             <p>Бюро кредитных историй — юридическое лицо, зарегистрированное в соответствии с законодательством Российской Федерации, являющееся коммерческой организацией и оказывающее в соответствии с Федеральным законом от 30.12.2004 № 218-ФЗ " О кредитных историях " услуги по формированию, обработке и хранению кредитных историй, а также по предоставлению кредитных отчётов и сопутствующих услуг.</p>
         </div> <!-- end content-block col -->
         
@@ -32,48 +32,6 @@
         </div> <!-- end content-block col -->
         
         <div class="content-block col-sm-12">
-            <h2 class="text-center">Как выглядит информация из НБКИ</h2>
-            <div class="row">
-                <div class="col-sm-2 col-sm-offset-1">
-                    <a href="#"><img src="images/samples/bki/nbki/bke-prm1.jpg" alt="Образец НБКИ 1" class="img-responsive"></a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="#"><img src="images/samples/bki/nbki/bke-prm2.jpg" alt="Образец НБКИ 2" class="img-responsive"></a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="#"><img src="images/samples/bki/nbki/bke-prm3.jpg" alt="Образец НБКИ 3" class="img-responsive"></a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="#"><img src="images/samples/bki/nbki/bke-prm4.jpg" alt="Образец НБКИ 4" class="img-responsive"></a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="#"><img src="images/samples/bki/nbki/bke-prm5.jpg" alt="Образец НБКИ 5" class="img-responsive"></a>
-                </div>
-            </div> <!-- end row -->
-        </div> <!-- end content-block col -->
-        
-        <div class="content-block col-sm-12">
-            <h2 class="text-center">Как выглядит информация из Equifax</h2>
-            <div class="row">
-                <div class="col-sm-2 col-sm-offset-1">
-                    <a href="#"><img src="images/samples/bki/equifax/bke2-prm1.jpg" alt="Образец Equifax 1" class="img-responsive"></a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="#"><img src="images/samples/bki/equifax/bke2-prm2.jpg" alt="Образец Equifax 2" class="img-responsive"></a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="#"><img src="images/samples/bki/equifax/bke2-prm3.jpg" alt="Образец Equifax 3" class="img-responsive"></a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="#"><img src="images/samples/bki/equifax/bke2-prm4.jpg" alt="Образец Equifax 4" class="img-responsive"></a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="#"><img src="images/samples/bki/equifax/bke2-prm5.jpg" alt="Образец Equifax 5" class="img-responsive"></a>
-                </div>
-            </div> <!-- end row -->
-        </div> <!-- end content-block col -->
-        
-        <div class="content-block col-sm-12">
             <h2 class="text-center">С этой услугой так же заказывают:</h2>
             <table class="table table-bordered table-responsive">
                 <tr>
@@ -88,18 +46,18 @@
                 </tr>
                 <tr>
                     <td class="text-center">2</td>
-                    <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=3') ?>">Выписка из ЕГРЮЛ</a></td>
-                    <td class="text-center">от 1500 руб.</td>
+                    <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=8') ?>">Справка из ДГИ (ДЖП)</a></td>
+                    <td class="text-center">от 999 руб.</td>
                 </tr>
                 <tr>
                     <td class="text-center">3</td>
-                    <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=6') ?>">Документы БТИ</a></td>
-                    <td class="text-center">от 9999 руб.</td>
+                    <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=7') ?>">Архивная выписка из домовой книги "АВДК"</a></td>
+                    <td class="text-center">от 4000 руб.</td>
                 </tr>
                 <tr>
                     <td class="text-center">4</td>
-                    <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=8') ?>">Справка из ДГИ (ДЖП)</a></td>
-                    <td class="text-center">от 999 руб.</td>
+                    <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=9') ?>">Справка из ПНД и НД</a></td>
+                    <td class="text-center">от 4000 руб.</td>
                 </tr>
             </table>
         </div> <!-- end content-block col -->

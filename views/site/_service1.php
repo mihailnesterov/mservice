@@ -18,12 +18,12 @@
         </div> <!-- end content-block col -->
         
         <div class="content-block col-sm-12">
-            <p>Единый государственный реестр прав на недвижимое имущество - официальный государственный информационно-справочный ресурс, содержащий в себе сведения о правообладателях, сведения об арестах, ограничениях и обременениях недвижимого имущества жилого и нежилого фонда на территории Российской Федерации. Выписка из ЕГРП - основной документ, являющийся подтверждением или отсутствием зарегистрированного права в Едином государственном реестре прав на недвижимое имущество и сделок с ним.</p>
+            <p>Единый государственный реестр прав на недвижимое имущество - официальный государственный информационно-справочный ресурс, содержащий в себе сведения о правообладателях, сведения об арестах, ограничениях и обременениях недвижимого имущества жилого и нежилого фонда на территории Российской Федерации. Выписка из ЕГРН - основной документ, являющийся подтверждением или отсутствием зарегистрированного права в Едином государственном реестре прав на недвижимое имущество и сделок с ним.</p>
         </div> <!-- end content-block col -->
         
         <div class="content-block col-sm-12">
-            <p>Выписка из ЕГРП содержит сведения по объекту недвижимости на всей территории РФ. А именно данные о залоге, ипотеке по объекту, о правообладателе и его доле, об обременениях (ограничениях).</p>
-            <p>Так же в нем имеется информация о правопритязании на объект недвижимости. Вы можете заказать выписку из егрп онлайн. Коллеги, сведениями в выписке из ЕГРН для формирования разделов 2,3 в отношении заказываемого объекта филиал Росреестра может не распологать.</p>
+            <p>Выписка из ЕГРН содержит сведения по объекту недвижимости на всей территории РФ. А именно данные о залоге, ипотеке по объекту, о правообладателе и его доле, об обременениях (ограничениях).</p>
+            <p>Так же в нем имеется информация о правопритязании на объект недвижимости. Вы можете заказать выписку из ЕГРН онлайн. Коллеги, сведениями в выписке из ЕГРН для формирования разделов 2,3 в отношении заказываемого объекта филиал Росреестра может не распологать.</p>
         </div> <!-- end content-block col -->
         
         <div class="content-block col-sm-12">
@@ -32,12 +32,20 @@
                 <tr>
                     <th width="40%" class="text-center">ЕГРН (с печатью) жилые/нежилые помещения</th>
                     <th width="30%" class="text-center">Москва</th>
-                    <th class="text-center">Московская область</th>
+                    <!--<th class="text-center">Московская область</th>-->
                 </tr>
                 <tr class="text-center">
                     <td>1 день</td>
-                    <td>4500</td>
-                    <td>3990</td>
+                    <td>3999</td>
+                    <!--<td>3990</td>-->
+                </tr>
+                <tr class="text-center">
+                    <td>3 дня</td>
+                    <td>3499</td>
+                </tr>
+                <tr class="text-center">
+                    <td>7 дней</td>
+                    <td>1599</td>
                 </tr>
             </table>
         </div> <!-- end content-block col -->
@@ -50,57 +58,6 @@
                 <li>Площадь объекта</li>
                 <li>Актуальные обременения и ограничения по объекту</li>
             </ul>
-        </div> <!-- end content-block col -->
-        
-        <div class="content-block col-sm-12">
-            <h2 class="text-center">Образец выписки ЕГРН без печати</h2>
-            <div class="row">
-                <div class="col-sm-3 col-sm-offset-3">
-                    <a href="#"><img src="images/samples/egrn/egrnonlinezoom1.jpg" alt="Образец выписки ЕГРН" class="img-responsive"></a>
-                </div>
-                <div class="col-sm-3">
-                     <a href="#"><img src="images/samples/egrn/egrnonlinezoom1.jpg" alt="Образец ЕГРН без печати" class="img-responsive"></a>
-                </div>
-            </div> <!-- end row -->
-        </div> <!-- end content-block col -->
-        
-        <div class="content-block col-sm-12">
-            <h2 class="text-center">Образец выписки Информация по объекту в электронном виде</h2>
-            <div class="row">
-                <div class="col-sm-3 col-sm-offset-5">
-                    <a href="#"><img src="images/samples/egrn/primeregrn.jpg" alt="Образец выписки ЕГРН в электронном виде" class="img-responsive"></a>
-                </div>
-            </div> <!-- end row -->
-        </div> <!-- end content-block col -->
-        
-        <div class="content-block col-sm-12">
-            <h2 class="text-center">Образец выписки из ЕГРН по Московской области</h2>
-            <div class="row">
-                <div class="col-sm-3 col-sm-offset-3">
-                    <a href="#"><img src="images/samples/egrn/egrp.jpg" alt="Образец ЕГРН МО" class="img-responsive"></a>
-                </div>
-                <div class="col-sm-3">
-                    <a href="#"><img src="images/samples/egrn/egrn2.jpg" alt="Образец ЕГРН Московская область" class="img-responsive"></a>
-                </div>
-            </div> <!-- end row -->
-        </div> <!-- end content-block col -->
-        
-        <div class="content-block col-sm-12">
-            <h2 class="text-center">Образец выписки из ЕГРН по Москве</h2>
-            <div class="row">
-                <div class="col-sm-3">
-                    <a href="#"><img src="images/samples/egrn/egrn1msk.jpg" alt="Образец выписки ЕГРН Москва" class="img-responsive"></a>
-                </div>
-                <div class="col-sm-3">
-                    <a href="#"><img src="images/samples/egrn/egrn2msk.jpg" alt="Образец ЕГРН Москва" class="img-responsive"></a>
-                </div>
-                <div class="col-sm-3">
-                    <a href="#"><img src="images/samples/egrn/egrn3msk.jpg" alt="Выписка ЕГРН Москва" class="img-responsive"></a>
-                </div>
-                <div class="col-sm-3">
-                    <a href="#"><img src="images/samples/egrn/egrn4msk.jpg" alt="ЕГРН Москва" class="img-responsive"></a>
-                </div>
-            </div> <!-- end row -->
         </div> <!-- end content-block col -->
         
         <div class="content-block col-sm-12">
@@ -120,7 +77,7 @@
         </div> <!-- end content-block col -->
         
         <div class="content-block col-sm-12">
-            <h2 class="text-center">Структура (сведения) в выписке из ЕГРП:</h2>
+            <h2 class="text-center">Структура (сведения) в выписке из ЕГРН:</h2>
             <ul>
                  <li>Сведения об объекте жилого или нежилого фонда</li>
                  <li>Кадастровый или условный номер, площадь объекта, адрес</li>
@@ -159,26 +116,26 @@
         </div> <!-- end content-block col -->
         
         <div class="content-block col-sm-12">
-            <h2 class="text-center">Срочное получение выписки из ЕГРП:</h2>
-            <p class="text-center">Заказывая справку из ЕГРП у нас, вы получаете ее СРОЧНО, в обговоренные сроки и с доставкой лично вам в руки.</p>
+            <h2 class="text-center">Срочное получение выписки из ЕГРН:</h2>
+            <p class="text-center">Заказывая справку из ЕГРН у нас, вы получаете ее СРОЧНО, в обговоренные сроки и с доставкой лично вам в руки.</p>
         </div> <!-- end content-block col -->
         
         <div class="content-block col-sm-12">
-            <h2 class="text-center">ПОЧЕМУ ВЫПИСКУ ИЗ ЕГРП НУЖНО ПОЛУЧИТЬ У НАС?:</h2>
+            <h2 class="text-center">ПОЧЕМУ ВЫПИСКУ ИЗ ЕГРН НУЖНО ПОЛУЧИТЬ У НАС?:</h2>
             <ul>
                 <li>Гарантированный срок</li>
-                <li>Точные сведения из ЕГРП</li>
+                <li>Точные сведения из ЕГРН</li>
                 <li>Вы экономите ваше время</li>
-                <li>Вы получаете выписку ЕГРП точно в руки</li>
+                <li>Вы получаете выписку ЕГРН точно в руки</li>
             </ul>
         </div> <!-- end content-block col -->
         
         <div class="content-block col-sm-12">
-            <h2 class="text-center">Выписки из ЕГРП по телефону в Москве</h2>
+            <h2 class="text-center">Выписки из ЕГРН по телефону в Москве</h2>
             <hr>
             <h3 class="text-center"><?= Yii::$app->controller->getCompany('company')->phone1 ?></h3>
-            <p class="text-center">выписки из ЕГРП по Московской области</p>
-            <p class="text-center">выписки из ЕГРП на земельный участок</p>
+            <p class="text-center">выписки из ЕГРН по Московской области</p>
+            <p class="text-center">выписки из ЕГРН на земельный участок</p>
         </div> <!-- end content-block col -->
         
     </div> <!-- end row -->

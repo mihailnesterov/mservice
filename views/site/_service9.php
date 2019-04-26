@@ -9,9 +9,9 @@
     <div class="row">
         
         <div class="content-block col-sm-12">
-            <h2 class="text-center bg-success">Справки ПНД и НД заказать</h2>
+            <h2 class="text-center bg-success">Справки ПНД и НД</h2>
             <p>* - Окончательная цена может измениться в зависимости от адреса регистрации проверяемого человека.</p>
-            <p>Справки из районного наркологического диспансера (НД) и психоневрологического диспансера (ПНД) содержат сведения об учете проверяемого.</p>
+            <p>Справки из районного наркологического диспансера (НД) и психоневрологического диспансера (ПНД) содержат сведения состоит ли на учёте проверяемый.</p>
             <p>Данные справки носят информационный характер для сделок с недвижимостью.</p>
         </div> <!-- end content-block col -->
         
@@ -20,22 +20,61 @@
         </div> <!-- end content-block col -->
         
         <div class="content-block col-sm-12">
-            <h2 class="text-center">Сколько стоит справка ПНД и справка НД</h2>
+            <h2 class="text-center">Сколько стоят справки из ПНД и НД на запросах</h2>
             <table class="table table-bordered table-responsive">
                 <tr>
                     <th width="30%" class="text-center">Справки ПНД и НД</th>
                     <th width="30%" class="text-center">Москва</th>
                     <th class="text-center">Московская область</th>
+                    <th class="text-center">Регионы РФ</th>
                 </tr>
                 <tr>
                     <td class="text-center">2 дня</td>
                     <td class="text-center">4500*</td>
                     <td class="text-center">6500*</td>
+                    <td class="text-center"></td>
                 </tr>
                 <tr>
                     <td class="text-center">4 дня</td>
                     <td class="text-center">4000*</td>
                     <td class="text-center">5500*</td>
+                    <td class="text-center"></td>
+                </tr>
+                <tr>
+                    <td class="text-center">5 дней</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center">6500*</td>
+                </tr>
+            </table>
+        </div> <!-- end content-block col -->
+
+        <div class="content-block col-sm-12">
+            <h2 class="text-center">Сколько стоят справки из ПНД и НД на бланках</h2>
+            <table class="table table-bordered table-responsive">
+                <tr>
+                    <th width="30%" class="text-center">Справки ПНД и НД</th>
+                    <th width="30%" class="text-center">Москва</th>
+                    <th class="text-center">Московская область</th>
+                    <th class="text-center">Регионы РФ</th>
+                </tr>
+                <tr>
+                    <td class="text-center">2 дня</td>
+                    <td class="text-center">4500*</td>
+                    <td class="text-center">6500*</td>
+                    <td class="text-center"></td>
+                </tr>
+                <tr>
+                    <td class="text-center">4 дня</td>
+                    <td class="text-center">4000*</td>
+                    <td class="text-center">5500*</td>
+                    <td class="text-center"></td>
+                </tr>
+                <tr>
+                    <td class="text-center">5 дней</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center">7500*</td>
                 </tr>
             </table>
         </div> <!-- end content-block col -->

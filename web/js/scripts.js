@@ -774,3 +774,13 @@
         }
         
     });
+
+    // меняем в комплексах для МО "История перехода права" на "История перехода права (технический вид)"
+    $(function () {
+        $('.recommended-block .region-tr').each(function() {
+            let serviceName = $(this).find('.service-name').html();
+            if (serviceName == 'История перехода права' && $(this).attr('region') == 2) {
+                $(this).find('.service-name').html( serviceName + ' (технический вид)')
+            }
+        });
+    });

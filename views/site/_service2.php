@@ -49,18 +49,6 @@
         </div> <!-- end content-block col -->
         
         <div class="content-block col-sm-12">
-            <h2 class="text-center">Образец выписки ЕГРН без печати</h2>
-            <div class="row">
-                <div class="col-sm-3 col-sm-offset-3">
-                    <a href="#"><img src="images/samples/egrn/egrnonlinezoom1.jpg" alt="Образец выписки ЕГРН" class="img-responsive"></a>
-                </div>
-                <div class="col-sm-3">
-                     <a href="#"><img src="images/samples/egrn/egrnonlinezoom1.jpg" alt="Образец ЕГРН без печати" class="img-responsive"></a>
-                </div>
-            </div> <!-- end row -->
-        </div> <!-- end content-block col -->
-        
-        <div class="content-block col-sm-12">
             <h2 class="text-center">Структура документа:</h2>
             <ul>
                 <li>Кадастровый номер</li>
@@ -77,7 +65,7 @@
         </div> <!-- end content-block col -->
         
         <div class="content-block col-sm-12">
-            <h2 class="text-center">Структура (сведения) в выписке из ЕГРП:</h2>
+            <h2 class="text-center">Структура (сведения) в выписке из ЕГРН:</h2>
             <ul>
                  <li>Сведения об объекте жилого или нежилого фонда</li>
                  <li>Кадастровый или условный номер, площадь объекта, адрес</li>
@@ -116,17 +104,17 @@
         </div> <!-- end content-block col -->
         
         <div class="content-block col-sm-12">
-            <h2 class="text-center">Срочное получение выписки из ЕГРП:</h2>
-            <p class="text-center">Заказывая справку из ЕГРП у нас, вы получаете ее СРОЧНО, в обговоренные сроки и с доставкой лично вам в руки.</p>
+            <h2 class="text-center">Срочное получение выписки из ЕГРН:</h2>
+            <p class="text-center">Заказывая справку из ЕГРН у нас, вы получаете ее СРОЧНО, в обговоренные сроки и с доставкой лично вам в руки.</p>
         </div> <!-- end content-block col -->
         
         <div class="content-block col-sm-12">
-            <h2 class="text-center">ПОЧЕМУ ВЫПИСКУ ИЗ ЕГРП НУЖНО ПОЛУЧИТЬ У НАС?:</h2>
+            <h2 class="text-center">ПОЧЕМУ ВЫПИСКУ ИЗ ЕГРН НУЖНО ПОЛУЧИТЬ У НАС?:</h2>
             <ul>
                 <li>Гарантированный срок</li>
-                <li>Точные сведения из ЕГРП</li>
+                <li>Точные сведения из ЕГРН</li>
                 <li>Вы экономите ваше время</li>
-                <li>Вы получаете выписку ЕГРП точно в руки</li>
+                <li>Вы получаете выписку ЕГРН точно в руки</li>
             </ul>
         </div> <!-- end content-block col -->
         
@@ -134,8 +122,8 @@
             <h2 class="text-center">Выписки из ЕГРН по телефону в Москве</h2>
             <hr>
             <h3 class="text-center"><?= Yii::$app->controller->getCompany('company')->phone1 ?></h3>
-            <p class="text-center">выписки из ЕГРП по Московской области</p>
-            <p class="text-center">выписки из ЕГРП на земельный участок</p>
+            <p class="text-center">выписки из ЕГРН по Московской области</p>
+            <p class="text-center">выписки из ЕГРН на земельный участок</p>
         </div> <!-- end content-block col -->
         
     </div> <!-- end row -->
