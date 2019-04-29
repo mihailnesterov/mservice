@@ -38,13 +38,13 @@
                 </tr>
                 <tr>
                     <td class="text-center">1 день</td>
-                    <td class="text-center">4000</td>
+                    <td class="text-center">4000 руб. (без печати)</td>
                     <td class="text-center">-</td>
                 </tr>
                 <tr>
                     <td class="text-center">3-5 рабочих дней</td>
-                    <td class="text-center">-</td>
-                    <td class="text-center">от 7500 руб.</td>
+                    <td class="text-center">6500 руб. (с печатью)</td>
+                    <td class="text-center">от 5999 руб. (без печати) <br> от 7500 руб. (с печатью)</td>
                 </tr>
             </table>
         </div> <!-- end content-block col -->

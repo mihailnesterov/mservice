@@ -75,7 +75,7 @@
                 <tr>
                     <td class="text-center">2</td>
                     <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=7') ?>">Выписка из домовой книги</a></td>
-                    <td class="text-center">от 4000 руб.</td>
+                    <td class="text-center">от 7500 руб.</td>
                 </tr>
             </table>
         </div> <!-- end content-block col -->
