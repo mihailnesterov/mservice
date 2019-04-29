@@ -102,7 +102,11 @@ use yii\widgets\Breadcrumbs;
                                                                                 <option>выбрать сроки и стоимость</option>
                                                                                 <?php foreach ($prices as $key => $price): ?>
                                                                                     <?php if ( $price->serv_in_reg_id == $price->servInReg->id && $price->serv_in_reg_id == $service->id ): ?>
-                                                                                        <option value="<?= $price->price ?>"><?= $price->speed ?> <?= $price->price ?> руб.</option>
+                                                                                        <?php if ( $price->id === 42 ): ?>
+                                                                                            <option value="<?= $price->price ?>">цена договорная</option>
+                                                                                        <?php else: ?>
+                                                                                            <option value="<?= $price->price ?>"><?= $price->speed ?> <?= $price->price ?> руб.</option>
+                                                                                        <?php endif ?>
                                                                                     <?php endif ?>
                                                                                 <?php endforeach ?>
                                                                             </select>

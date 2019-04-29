@@ -95,11 +95,6 @@
                     <th width="65%" class="text-center">Название услуги</th>
                     <th class="text-center">Цена</th>
                 </tr>
-                <!--<tr>
-                    <td class="text-center">1</td>
-                    <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=5') ?>">Кадастровый паспорт</a></td>
-                    <td class="text-center">от 1500 руб.</td>
-                </tr>-->
                 <tr>
                     <td class="text-center">1</td>
                     <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=5') ?>">История перехода права</a></td>
