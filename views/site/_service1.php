@@ -28,7 +28,28 @@
         
         <div class="content-block col-sm-12">
             <h2 class="text-center">Стоимость выписки из ЕГРН</h2>
-            <table class="table table-bordered table-responsive">
+            <!-- debug:added service-price-table 10-05-19 -->
+
+            <div id="service-price-block" class="row text-center">
+                <!--<div class="col-md-6">
+                    <div class="item-service-price-block">
+                        <h4>Москва</h4><hr>
+                        <p>1 день 3999 руб.</p>
+                        <p>1 день 3999 руб.</p>
+                        <p>1 день 3999 руб.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="item-service-price-block">
+                        <h4>Московская область</h4><hr>
+                        <p>1 день 3999 руб.</p>
+                        <p>1 день 3999 руб.</p>
+                        <p>1 день 3999 руб.</p>
+                    </div>
+                </div>-->
+            </div>
+
+            <table id="service-price-table" class="table table-bordered table-responsive hidden">
                 <tr>
                     <th width="40%" class="text-center">ЕГРН (с печатью) жилые/нежилые помещения</th>
                     <th width="30%" class="text-center">Москва</th>
@@ -90,14 +111,24 @@
         </div> <!-- end content-block col -->
         
         <div class="content-block col-sm-12">
-            <h2 class="text-center">С этой услугой так же заказывают:</h2>
+            <h2 class="text-center">С этой услугой также заказывают:</h2>
             <table class="table table-bordered table-responsive">
                 <tr>
                     <th width="5%" class="text-center">№</th>
                     <th width="65%" class="text-center">Название услуги</th>
                     <th class="text-center">Цена</th>
                 </tr>
-                <tr>
+                <?php if($serviceAlsoOrder): ?>
+                    <?php $serviceAlsoOrderCount = 0; ?>
+                    <?php foreach( $serviceAlsoOrder as $also ): ?>
+                        <tr>
+                            <td class="text-center"><?= ++$serviceAlsoOrderCount ?></td>
+                            <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id='.$also->service_also_id) ?>"><?= $also->getServiceName($also->service_also_id) ?></a></td>
+                            <td class="text-center">от <?= $also->getMinPrice($also->service_also_id) ?> руб.</td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+                <!--<tr>
                     <td class="text-center">1</td>
                     <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=5') ?>">История перехода права</a></td>
                     <td class="text-center">от 1500 руб.</td>
@@ -111,7 +142,7 @@
                     <td class="text-center">3</td>
                     <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=9') ?>">Справка из ПНД и НД </a></td>
                     <td class="text-center">от 4000 руб.</td>
-                </tr>
+                </tr>-->
             </table>
         </div> <!-- end content-block col -->
         

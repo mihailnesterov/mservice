@@ -211,15 +211,38 @@
             }
         });
         // показать сканы только для выбранного региона, в зависимости от значения data-scan-region 
+        // изменить заголовок Образец...Образцы... или отключить, если сканов 0
+        let scanCount = 0;  // посчитать сканы у услуги
         $('.scan').each(function(){
             var scanRegionId = $(this).data('scanRegion');
+            
             if (scanRegionId === parseInt(selectedRegionId)) {
                 $(this).show();
+                scanCount++;
+                console.log('show=' + scanRegionId + ' scanCount=' + scanCount);
+                
             } else {
                 $(this).hide();
             }
         });
+        // скрыть "Образец" если сканов 0 - !!!не работает в барабане!!!, для барабана искать другое решение...
+        if( scanCount === 0) {
+            $('.scan-block h4').hide();
+        } else {
+            $('.scan-block h4').show();
+        }
+
+        /*if( scanCount === 0) {
+            $('.scan-block h4').hide()
+        } else if ( scanCount === 1 ) {
+            $('.scan-block h4').html('Образец:');
+        } else {
+            $('.scan-block h4').html('Образцы :');
+        }
+        console.log('h4=' + $('.scan-block h4').html() + ' scanCount=' + scanCount);*/
         
+        
+        //changeScansHeader(selectedRegionId);  // не используется!
 
         // очистить корзину и таблицу на шаге 3, обнулить "Итого", если выбран другой регион
         $('#cart-list').each(function() {
@@ -784,3 +807,124 @@
             }
         });
     });
+
+
+    // заполняем блок "Стоимость услуги..." на странице единичной услуги
+    $(function () {
+        let pricesArr = [];
+        let pricesObj = {};
+        let regions = [];
+
+        $('#services-checks-regions input[type="radio"]').each(function() {
+            regions.push($(this).attr('region'));
+            //console.log( 'region=' + $(this).attr('region') );
+        });
+
+        //console.log( 'regions=' + regions.toString() );
+       
+        $('.select-price option').each(function() {
+            if( $(this).index() != 0 ) {
+                pricesArr.push($(this).data('region') );
+            }
+            if( $(this).data('speed') && $(this).data('region') ) {
+                //console.log( $(this).data('region') + ' = ' +  $(this).data('speed') + ' = ' + $(this).val() );
+            }
+            
+        });
+/*
+        regions = Object.keys(regionsFiltered);
+        console.log( 'regions filtered=' + regions );*/
+
+        for(let i = 0; i < pricesArr.length; i++) {
+            pricesObj[pricesArr[i]] = true;
+        }
+
+        pricesArr = Object.keys(pricesObj);
+        
+        //console.log( 'regions with prices=' + pricesArr.toString() );
+
+        //let minArr = Math.min.apply(null, pricesArr);
+
+        //console.log( 'minArr=' + minArr );
+
+        /*$('#service-price-table').append($('<tr>')
+        .append($('<td>').append("text1"))
+        .append($('<td>').append("text2"))
+        .append($('<td>').append("text3"))
+        .append($('<td>').append("text4"))
+        );*/
+
+        // добавляем заголовки в таблицу с именами регионов
+        /*$('#service-price-table').append('<tr id="tr-regions">');
+        for(let i = 0; i < pricesArr.length; i++) {
+            $('#services-checks-regions input[type="radio"]').each(function() {
+                if( $(this).attr('region') == pricesArr[i] ) {
+                    $('#service-price-table #tr-regions').append('<th class="text-center">'
+                        + $(this).attr('region-name') +'</th>');
+                    console.log( 'region=' + $(this).attr('region') + $(this).attr('region-name') );
+                }
+                
+            });
+        }*/
+        // добавляем строки с ценами для регионов
+        for(let i = 0; i < pricesArr.length; i++) {
+
+            let regionName = '';
+            let col = 12 / pricesArr.length;
+            let priceItems = [];
+            let items = '';
+
+            $('#services-checks-regions input[type="radio"]').each(function() {
+                if( $(this).attr('region') == pricesArr[i] ) {
+                    regionName = $(this).attr('region-name');
+                }
+                
+            });
+
+            $('.select-price option').each(function() {
+                if( $(this).index() != 0 && $(this).data('region') == pricesArr[i] ) {
+                   if( $(this).data('speed') && $(this).data('region') ) {
+                        priceItems.push($(this).data('speed') + ' ' + $(this).val() + ' руб.');
+                        //console.log( $(this).data('region') + ' = ' +  $(this).data('speed') + ' = ' + $(this).val() );
+                    }
+                }
+            });
+
+            for(let i = 0; i < priceItems.length; i++) {
+                items+= '<p>'  + priceItems[i] + '</p>'
+            }
+
+            $('#service-price-block')
+                .append('<div class="col-md-' + col + '">'
+                    + '<div class="item-service-price-block">'
+                    + '<h4>' + regionName + '</h4><hr>'
+                    + items
+                    + '</div>'
+                    + '</div>'
+                );
+        }
+
+
+    });
+
+    // не используется! реализовано в $('input[name="services-checks-regions"]').change
+    // функция изменяет заголовок в сканах: Образец...Образцы... или скрывает заголовок, если образцов нет
+    function changeScansHeader(region) {
+        let scanCount = 0;
+        let scanRegion = 1;
+        $('.scan').each(function() {
+            let scanRegionId = $(this).data('scanRegion');
+            if ($(this).css('display') !== 'none' && scanRegionId === parseInt(region)) {
+                scanCount++;
+                console.log('count display none=' + scanCount);
+            }
+        });
+        if( scanCount === 0) {
+            $('.scan-block h4').hide()
+        } else if ( scanCount === 1 ) {
+            $('.scan-block h4').html('Образец:');
+        } else {
+            $('.scan-block h4').html('Образцы :');
+        }
+        console.log('scanCount=' + scanCount);
+    }

@@ -7,6 +7,8 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\widgets\Breadcrumbs;
+
+use app\models\ServiceAlsoOrder;
 ?>
 
 <main role="main">
@@ -82,7 +84,7 @@ use yii\widgets\Breadcrumbs;
                                                                             <div class="panel-body">
                                                                                 <p><?= $service->service->description ?></p>
                                                                                 <div class="row scan-block">
-                                                                                        <h4 class="col-xs-12">Образцы:</h4>
+                                                                                        <h4 class="col-xs-12">Образец:</h4>
                                                                                         <?php $imgCounter = 1; ?> 
                                                                                             <?php foreach ($scans as $key => $scan): ?>      
                                                                                                 <?php if ( $scan->service->id == $service->service->id): ?>
@@ -103,9 +105,23 @@ use yii\widgets\Breadcrumbs;
                                                                                 <?php foreach ($prices as $key => $price): ?>
                                                                                     <?php if ( $price->serv_in_reg_id == $price->servInReg->id && $price->serv_in_reg_id == $service->id ): ?>
                                                                                         <?php if ( $price->id === 42 ): ?>
-                                                                                            <option value="<?= $price->price ?>">цена договорная</option>
+                                                                                            <option 
+                                                                                            value="" 
+                                                                                            data-speed="цена договорная" 
+                                                                                            data-region="<?= $price->servInReg->region_id ?>" 
+                                                                                            data-region-name="<?= $region->name ?>"
+                                                                                            >
+                                                                                                цена договорная
+                                                                                            </option>
                                                                                         <?php else: ?>
-                                                                                            <option value="<?= $price->price ?>"><?= $price->speed ?> <?= $price->price ?> руб.</option>
+                                                                                            <option 
+                                                                                            value="<?= $price->price ?>" 
+                                                                                            data-speed="<?= $price->speed ?>" 
+                                                                                            data-region="<?= $price->servInReg->region_id ?>" 
+                                                                                            data-region-name="<?= $region->name ?>"
+                                                                                            >
+                                                                                                <?= $price->speed ?> <?= $price->price ?> руб.
+                                                                                            </option>
                                                                                         <?php endif ?>
                                                                                     <?php endif ?>
                                                                                 <?php endforeach ?>
@@ -251,10 +267,13 @@ use yii\widgets\Breadcrumbs;
 
     <?php
         // service page content output
-        $url=$_SERVER['REQUEST_URI'];
-        $serviceID = explode('=', $url);
-        if($serviceID[1]) {
-            echo $this->render('_service'.$serviceID[1]);
+        /*$url=$_SERVER['REQUEST_URI'];
+        $serviceID = explode('=', $url);*/
+        if($model) {
+            echo $this->render('_service'.$model->id, [
+                'serviceAlsoOrder' => $serviceAlsoOrder,
+                'model' => $model,
+            ]);
         }        
     ?>
     

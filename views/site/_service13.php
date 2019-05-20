@@ -51,9 +51,12 @@
                 <li><h4>Выявленные риски и рекомендации</h4></li>
             </ol>
         </div> <!-- end content-block col -->
-        
+
         <div class="content-block col-sm-12">
-            <h2 class="text-center"><a href="https://vk.com/doc72844422_443938248" target="_blank">Образец Юридического заключения</a></h2>
+            <h2 class="text-center">Стоимость юридического заключения</h2>
+            <div id="service-price-block" class="row text-center">
+                
+            </div>
         </div> <!-- end content-block col -->
         
         <div class="content-block col-sm-12">

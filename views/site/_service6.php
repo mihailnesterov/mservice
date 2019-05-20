@@ -47,16 +47,33 @@
                 <li>Для оформления залога</li>
             </ul>
         </div> <!-- end content-block col -->
+
+        <div class="content-block col-sm-12">
+            <h2 class="text-center">Стоимость документов БТИ</h2>
+            <div id="service-price-block" class="row text-center">
+                
+            </div>
+        </div> <!-- end content-block col -->
         
         <div class="content-block col-sm-12">
-            <h2 class="text-center">С этой услугой так же заказывают:</h2>
+            <h2 class="text-center">С этой услугой также заказывают:</h2>
             <table class="table table-bordered table-responsive">
                 <tr>
                     <th width="5%" class="text-center">№</th>
                     <th width="65%" class="text-center">Название услуги</th>
                     <th class="text-center">Цена</th>
                 </tr>
-                <tr>
+                <?php if($serviceAlsoOrder): ?>
+                    <?php $serviceAlsoOrderCount = 0; ?>
+                    <?php foreach( $serviceAlsoOrder as $also ): ?>
+                        <tr>
+                            <td class="text-center"><?= ++$serviceAlsoOrderCount ?></td>
+                            <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id='.$also->service_also_id) ?>"><?= $also->getServiceName($also->service_also_id) ?></a></td>
+                            <td class="text-center">от <?= $also->getMinPrice($also->service_also_id) ?> руб.</td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+                <!--<tr>
                     <td class="text-center">1</td>
                     <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=5') ?>">История перехода права</a></td>
                     <td class="text-center">от 1500 руб.</td>
@@ -65,7 +82,7 @@
                     <td class="text-center">2</td>
                     <td class="text-left"><a href="<?= Yii::$app->urlManager->createUrl('services?id=7') ?>">Выписка из домовой книги</a></td>
                     <td class="text-center">от 4000 руб.</td>
-                </tr>
+                </tr>-->
             </table>
         </div> <!-- end content-block col -->
         

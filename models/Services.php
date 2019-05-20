@@ -13,7 +13,9 @@ use Yii;
  * @property int $sort сортировка
  *
  * @property Scans[] $scans
+ * @property ServiceAlsoOrder[] $serviceAlsoOrders
  * @property ServiceInRegion[] $serviceInRegions
+ * @property ServicesInComplex[] $servicesInComplexes
  */
 class Services extends \yii\db\ActiveRecord
 {
@@ -62,8 +64,34 @@ class Services extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
+    public function getServiceAlsoOrders()
+    {
+        return $this->hasMany(ServiceAlsoOrder::className(), ['service_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
     public function getServiceInRegions()
     {
         return $this->hasMany(ServiceInRegion::className(), ['service_id' => 'id']);
     }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getServicesInComplexes()
+    {
+        return $this->hasMany(ServicesInComplex::className(), ['service_id' => 'id']);
+    }
+
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    /*public function getServiceByAlsoId($id)
+    {
+        $serviceById = $this->find()->where(['id' => $this->id])->one();
+        return $serviceById->servicealsoorder->id;
+    }*/
 }

@@ -893,6 +893,19 @@ a:hover {
     padding: 1em;
 }
 
+/* blocks with prices on service's pages */
+#service-price-block {
+	margin: 2em 0;
+}
+#service-price-block .item-service-price-block {
+	padding-top: 2em;
+	padding-bottom: 2em;
+	margin: 0.5em;
+	border: 1px #eee solid;
+	min-height: 250px;
+}
+
+
 /* footer */
 
 footer {
@@ -991,6 +1004,11 @@ footer #copyright a {
 	#about-on-main-left {
 		padding: 1em 2em 3em 1em;
 		text-align: left;
+	}
+	#service-price-block .item-service-price-block {
+		margin: 0;
+		margin-bottom: 2em;
+		min-height: auto;
 	}
 }
 @media (max-width:767px) {	/* смартфоны */

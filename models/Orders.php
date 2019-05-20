@@ -94,7 +94,65 @@ class Orders extends \yii\db\ActiveRecord
 
             $company = Yii::$app->controller->getCompany('company');
 
+            // prepare params for email
+            Yii::$app->mailer->getView()->params['company'] = $company;
+            Yii::$app->mailer->getView()->params['client_id'] = $this->client->id;
+            Yii::$app->mailer->getView()->params['client_name'] = $this->client->name;
+            Yii::$app->mailer->getView()->params['order_id'] = $this->id;
+            Yii::$app->mailer->getView()->params['orderItems'] = $jsonItems;
+            Yii::$app->mailer->getView()->params['order_date'] = date('d.m.Y');
+            // send email to client
             Yii::$app->mailer->compose([
+                    'html' => 'view-html',
+                    'text' => 'view-text',
+                ],
+                [
+                    'company' => $company,
+                    'client_id' => $this->client->id,
+                    'client_name' => $this->client->name,
+                    'order_id' => $this->id,
+                    'orderItems' => $jsonItems,
+                    'order_date' => date('d.m.Y'),
+                ])
+                //->setFrom([$company->email => $company->name.' | Заказ № sbt24-'.$this->id])
+                ->setFrom([$company->email => $company->name.' | Заказ № ms-'.$this->id])
+                ->setTo($this->client->email)
+                ->setSubject('Ваш заказ в MSERVICE № ms-'.$this->id.', от '.date('d.m.Y'))
+                //->setTextBody($this->clients->name.', Ваш заказ получен, в ближайшее время мы свяжемся с вами')
+                //->setHtmlBody('<p>'.$this->client->name.', Ваш заказ получен, в ближайшее время мы свяжемся с вами</p>')
+                ->send();
+            // send email to company
+            Yii::$app->mailer->compose([
+                    'html' => 'company-html',
+                    'text' => 'company-text',
+                ],
+                [
+                    'company' => $company,
+                    'client_id' => $this->client->id,
+                    'client_name' => $this->client->name,
+                    'client_phone' => $this->client->phone,
+                    'client_email' => $this->client->email,
+                    'order_id' => $this->id,
+                    'orderItems' => $jsonItems,
+                    'order_date' => date('d.m.Y'),
+                ])
+                //->setFrom([$company->email => $company->name.' | Заказ № sbt24-'.$this->id])
+                ->setFrom([$company->email => $company->name.' | Заказ № ms-'.$this->id])
+                ->setTo($company->email)
+                //->setTo('mhause@mail.ru')
+                ->setSubject('Получен заказ № ms-'.$this->id.', от '.date('d.m.Y'))
+                //->setTextBody($this->client->company.', '.$this->client->contact.', '.$this->client->phone.', '.$this->client->email)
+                //->setHtmlBody('<p>'.$this->client->company.', '.$this->client->contact.', '.$this->client->phone.', '.$this->client->email.'</p>')
+                ->send();
+
+            Yii::$app->mailer->getView()->params['company'] = null;
+            Yii::$app->mailer->getView()->params['client_id'] = null;
+            Yii::$app->mailer->getView()->params['client_name'] = null;
+            Yii::$app->mailer->getView()->params['order_id'] = null;
+            Yii::$app->mailer->getView()->params['orderItems'] = null;
+            Yii::$app->mailer->getView()->params['order_date'] = null;
+
+            /*Yii::$app->mailer->compose([
                 'html' => 'test',
                 'text' => 'test',
                 ])
@@ -114,7 +172,7 @@ class Orders extends \yii\db\ActiveRecord
                 ->setSubject('Получен заказ № ms-'.$this->id.', от '.date('Y.m.d'))
                 ->setTextBody($this->client->name.', '.$this->client->phone.', '.$this->client->email)
                 ->setHtmlBody('<p>'.$this->client->name.', '.$this->client->phone.', '.$this->client->email.'</p>')
-                ->send();
+                ->send();*/
 
         } else {
             // if updates order

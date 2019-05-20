@@ -17,6 +17,7 @@ use app\models\ServicesInComplex;
 use app\models\Clients;
 use app\models\Orders;
 use app\models\OrderItems;
+use app\models\ServiceAlsoOrder;
 use yii\filters\VerbFilter;
 use yii\web\NotFoundHttpException;
 use yii\base\Event;
@@ -151,27 +152,6 @@ class SiteController extends Controller
             'name' => 'description',
             'content' => ''
         ]);
-        
-        /*
-        Сортировка услуг:
-            1 Выписка из ЕГРН с печатью
-            2 Выписка из ЕГРН без печати
-            3 История перехода права
-            4 Архивная выписка из домовой книги "АВДК" 
-            5 Справка из ЦАБ	
-            6 Справка из ПНД и НД
-            7 Справка из ДГИ(ДЖП)
-            8 Документы БТИ
-            9 Проверка кредитной истории "НБКИ"
-            10 Архив Росреестра
-            11 Регистрация недвижимости
-            12 Юридическое заключение
-            13 Выписка из ЕГРЮЛ
-            
-            14 Проверка на банкротство
-            15 Негатив
-            16 Наличие собственности
-        */
 
         $regions = Regions::find()->orderby(['id'=>SORT_ASC])->all();
         $services = Services::find()->orderby(['sort'=>SORT_ASC])->all();
@@ -224,6 +204,7 @@ class SiteController extends Controller
         $servicesInRegion = ServiceInRegion::find()->orderby(['id'=>SORT_ASC])->all();
         $prices = Prices::find()->orderby(['sort'=>SORT_ASC])->all();
         $scans = Scans::find()->where(['is_active'=>1])->orderby(['id'=>SORT_ASC])->all();
+        $serviceAlsoOrder = ServiceAlsoOrder::find()->where(['service_id' => $id])->orderby(['service_also_id'=>SORT_ASC])->all();
 
         $clientName = '';
         $clientEmail = '';
@@ -275,6 +256,7 @@ class SiteController extends Controller
             'clientName' => $clientName,
             'clientEmail' => $clientEmail,
             'clientPhone' => $clientPhone,
+            'serviceAlsoOrder' => $serviceAlsoOrder,
         ]);
     }
     

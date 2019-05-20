@@ -117,8 +117,8 @@ use yii\widgets\ActiveForm;
                                                                 <div id="collapse<?= $service->id ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<?= $service->id ?>">
                                                                     <div class="panel-body">
                                                                             <p><?= $service->service->description ?></p>
-                                                                            <div class="row">
-                                                                                    <h4 class="col-xs-12">Образцы:</h4>
+                                                                            <div class="row scan-block">
+                                                                                    <h4 class="col-xs-12">Образец:</h4>
                                                                                     <?php $imgCounter = 1; ?> 
                                                                                     <?php foreach ($scans as $key => $scan): ?>      
                                                                                             <?php if ( $scan->service->id == $service->service->id): ?>
