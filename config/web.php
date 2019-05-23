@@ -67,7 +67,7 @@ return [
                 'textLayout' => 'layouts/main-text',
                 'messageConfig' => [
                     'charset' => 'UTF-8',
-                    'from' => ['info@mservice.pro' => 'MService'],
+                    'from' => ['zgrmarket@mail.ru' => 'MService'],
                 ],
             ],
     ],

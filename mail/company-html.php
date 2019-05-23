@@ -21,12 +21,12 @@
     <?php foreach ( $orderItems as $key => $item ): ?>
         <?php 
             $itemCount++;
-            $total += $item->price;
+            $total += $item['sum'];
         ?>
         <tr>
             <td><?= $itemCount ?></td>
-            <td class="text-left"><?= $item->name ?></td>
-            <td><?= $item->price ?></td>
+            <td class="text-left"><?= $item['name'] ?></td>
+            <td><?= $item['sum'] ?></td>
         </tr>
     <?php endforeach; ?>
 </table>

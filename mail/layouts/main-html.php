@@ -123,7 +123,7 @@ $this->title = 'Заказ № ms-'.$this->params['order_id'].' от '.$this->pa
                 <h3><?= $this->params['company']->name ?></h3>
             </div>
             <div id="top-contacts">
-                <h3><?= $this->params['company']->phone ?></h3>
+                <h3><?= $this->params['company']->phone1 ?></h3>
                 <a href="mailto:<?= $this->params['company']->email ?>"><?= $this->params['company']->email ?></a>
             </div>
         </div>

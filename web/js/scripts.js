@@ -614,7 +614,7 @@
             url: form.attr('action'),
             type: form.attr('method'),
             data: formData,
-            success: function (data) {
+            success: function (res) {
                     $.gritter.add({
                         title: 'Подписка оформлена!',
                         text: 'Ваш email добавлен в базу подписчиков',
@@ -623,6 +623,7 @@
                         time: '3000'
                     });
                 $('#subscribe-form :input').val('');
+                //console.log('res=' + res);
                 return false;
             },
             error: function () {
@@ -638,20 +639,20 @@
         e.preventDefault();
         var order = {}; // создаем пустой объект для хранения позиций заказа
         var orderId = 1; // счетчик - он-же id заказа в объекте
-    
+        
         // проходим в цикле по таблице заказа
         $('#table-order-step3').find('.region-tr').each(function(){
-            
-             // получаем название услуги и цену
-             var name = $(this).find('.service-name').html();
-             var price = $(this).find('.sum').html();
-             // сохраняем в объекте название услуги и цену
-             order[orderId] = {};
-             order[orderId]['name'] = name;
-             order[orderId]['sum'] = price;
-             // увеличиваем счетчик и переходим к следующему id заказа в объекте
-             orderId++;
-        });
+            // получаем название услуги и цену
+            var name = $(this).find('.service-name').html();
+            var price = $(this).find('.sum').html();
+            // сохраняем в объекте название услуги и цену
+            order[orderId] = {};
+            order[orderId]['name'] = name;
+            order[orderId]['sum'] = price;
+            // увеличиваем счетчик и переходим к следующему id заказа в объекте
+            orderId++;
+
+       });
 
         // сохраняем объект (все пункты заказа) в json
         var orderJson = JSON.stringify(order);
@@ -673,14 +674,34 @@
                         sticky: false,
                         time: '3000'
                     });
+               // получить имя клиента, чтобы показать в thank-you
+                $('#thank-you h2 span').html( $('#client-name').val() + ',' );
+                $('#services-checks-regions').find('#region-1').attr('checked', true).change();
+                // скрыть блок "Как с вами связаться", если таблица пуста (сумма = 0)
+                if( $('.step3-sum').html() == '0' && $('#sum').html() == '0' ) {
+                    $('#go-back-step2').click();
+                }
+                //скрыть корзину если список пуст
+                $('#cart-list').each(function(){
+                    if( $(this).find('li').length == 0 ) {
+                        $('#cart-empty-text').show();
+                        hidecart();
+                    }
+                });
+                // показать thank-you
+                $('#thank-you').removeClass('hidden');
+                // очистить поля формы
                 $('#order-service-form :input').val('');
-                
+
                 return false;
             },
             error: function () {
                 alert('При оформлении заказа произошла ошибка!');
             }
         });
+
+        // 
+        
         
     }).on('submit', function(e){
         e.preventDefault();
@@ -928,3 +949,9 @@
         }
         console.log('scanCount=' + scanCount);
     }
+
+    // закрываем окно "thank-you"
+    $('#thank-you button').click(function() {
+        $('#thank-you').addClass('hidden');
+    });
+    

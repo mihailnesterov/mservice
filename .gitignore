@@ -5,3 +5,8 @@ web/assets
 mservice.code-workspace
 .vscode
 *.sql
+*.png
+*.jpg
+config/web.php
+config/db.php
+web.php

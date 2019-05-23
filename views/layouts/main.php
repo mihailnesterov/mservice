@@ -222,7 +222,15 @@
 			</div>	<!-- end row -->
 		</div>	 <!-- end container -->
 	</div>	 <!-- end cart -->
-         
+	<div id="thank-you" class="animated fadeIn hidden">
+        <div class="thank-you-inner text-center">
+            <h2><span></span> ваш заказ получен...</h2>
+            <h3>В ближайшее время наш менеджер свяжемся с Вами для...</h3>
+            <h3>На указанный Вами почтовый адрес отправлено письмо...</h3>
+            <hr>
+            <button type="button" class="btn btn-warning btn-lg">Закрыть</button>
+        </div>
+    </div>
         
         <div id="toTop"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
         <!--<script>ActiveLinksMain('main-menu')</script>-->

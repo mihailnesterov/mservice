@@ -6,7 +6,7 @@
 
 ?>
 
-<h2>Здравствуйте, <?= $client_contact ?>!</h2>
+<h2>Здравствуйте, <?= $client_name ?>!</h2>
 <p>Ваш заказ получен и находится в обработке. </p>
 <p>В ближайшее время наш менеджер свяжется с Вами для уточнения деталей заказа.</p>
 
@@ -21,12 +21,12 @@
     <?php foreach ( $orderItems as $key => $item ): ?>
         <?php 
             $itemCount++;
-            $total += $item->price;
+            $total += $item['sum'];
         ?>
         <tr>
             <td><?= $itemCount ?></td>
-            <td class="text-left"><?= $item->name ?></td>
-            <td><?= $item->price ?></td>
+            <td class="text-left"><?= $item['name'] ?></td>
+            <td><?= $item['sum'] ?></td>
         </tr>
     <?php endforeach; ?>
 </table>

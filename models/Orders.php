@@ -81,14 +81,12 @@ class Orders extends \yii\db\ActiveRecord
 
             $cookie = Yii::$app->getRequest()->getCookies()->getValue('addOrderItem', (isset($_COOKIE['addOrderItem']))? $_COOKIE['addOrderItem']: 'addOrderItem');
             $jsonItems = json_decode($cookie, true);
-            
-            $jsonItemsCounter = 0;
+
             for($i = 0; $i < count($jsonItems); $i++){
-                $jsonItemsCounter++;
                 $orderItem = new OrderItems();
                 $orderItem->order_id = $this->id;
-                $orderItem->name = $jsonItems[''.$jsonItemsCounter.'']['name'];
-                $orderItem->price = $jsonItems[''.$jsonItemsCounter.'']['sum'];
+                $orderItem->name = $jsonItems[''.($i+1).'']['name'];
+                $orderItem->price = $jsonItems[''.($i+1).'']['sum'];
                 $orderItem->save();
             }
 
@@ -114,8 +112,8 @@ class Orders extends \yii\db\ActiveRecord
                     'orderItems' => $jsonItems,
                     'order_date' => date('d.m.Y'),
                 ])
-                //->setFrom([$company->email => $company->name.' | Заказ № sbt24-'.$this->id])
-                ->setFrom([$company->email => $company->name.' | Заказ № ms-'.$this->id])
+                ->setFrom(['zgrmarket@mail.ru' => $company->name.' | Заказ № ms-'.$this->id])
+                //->setFrom([$company->email => $company->name.' | Заказ № ms-'.$this->id])
                 ->setTo($this->client->email)
                 ->setSubject('Ваш заказ в MSERVICE № ms-'.$this->id.', от '.date('d.m.Y'))
                 //->setTextBody($this->clients->name.', Ваш заказ получен, в ближайшее время мы свяжемся с вами')
@@ -137,7 +135,8 @@ class Orders extends \yii\db\ActiveRecord
                     'order_date' => date('d.m.Y'),
                 ])
                 //->setFrom([$company->email => $company->name.' | Заказ № sbt24-'.$this->id])
-                ->setFrom([$company->email => $company->name.' | Заказ № ms-'.$this->id])
+                ->setFrom(['zgrmarket@mail.ru' => $company->name.' | Заказ № ms-'.$this->id])
+                //->setFrom([$company->email => $company->name.' | Заказ № ms-'.$this->id])
                 ->setTo($company->email)
                 //->setTo('mhause@mail.ru')
                 ->setSubject('Получен заказ № ms-'.$this->id.', от '.date('d.m.Y'))

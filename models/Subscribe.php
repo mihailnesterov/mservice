@@ -57,7 +57,7 @@ class Subscribe extends \yii\db\ActiveRecord
 
             $company = Yii::$app->controller->getCompany('company');
 
-            Yii::$app->mailer->compose([
+            /*Yii::$app->mailer->compose([
                 'html' => 'test',
                 'text' => 'test',
                 ])
@@ -77,7 +77,7 @@ class Subscribe extends \yii\db\ActiveRecord
                 ->setSubject('Оформлена новая подписка')
                 ->setTextBody('Оформлена новая подписка, адрес: '.$this->email)
                 ->setHtmlBody('<p>Оформлена новая подписка, адрес: '.$this->email.'</p>')
-                ->send();
+                ->send();*/
 
         } else {
             // if updates subscribe
