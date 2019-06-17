@@ -96,6 +96,7 @@ class Orders extends \yii\db\ActiveRecord
             Yii::$app->mailer->getView()->params['company'] = $company;
             Yii::$app->mailer->getView()->params['client_id'] = $this->client->id;
             Yii::$app->mailer->getView()->params['client_name'] = $this->client->name;
+            Yii::$app->mailer->getView()->params['client_address'] = $this->address;
             Yii::$app->mailer->getView()->params['order_id'] = $this->id;
             Yii::$app->mailer->getView()->params['orderItems'] = $jsonItems;
             Yii::$app->mailer->getView()->params['order_date'] = date('d.m.Y');
@@ -108,6 +109,7 @@ class Orders extends \yii\db\ActiveRecord
                     'company' => $company,
                     'client_id' => $this->client->id,
                     'client_name' => $this->client->name,
+                    'client_address' => $this->address,
                     'order_id' => $this->id,
                     'orderItems' => $jsonItems,
                     'order_date' => date('d.m.Y'),
@@ -128,6 +130,7 @@ class Orders extends \yii\db\ActiveRecord
                     'company' => $company,
                     'client_id' => $this->client->id,
                     'client_name' => $this->client->name,
+                    'client_address' => $this->address,
                     'client_phone' => $this->client->phone,
                     'client_email' => $this->client->email,
                     'order_id' => $this->id,
@@ -147,6 +150,7 @@ class Orders extends \yii\db\ActiveRecord
             Yii::$app->mailer->getView()->params['company'] = null;
             Yii::$app->mailer->getView()->params['client_id'] = null;
             Yii::$app->mailer->getView()->params['client_name'] = null;
+            Yii::$app->mailer->getView()->params['client_address'] = null;
             Yii::$app->mailer->getView()->params['order_id'] = null;
             Yii::$app->mailer->getView()->params['orderItems'] = null;
             Yii::$app->mailer->getView()->params['order_date'] = null;

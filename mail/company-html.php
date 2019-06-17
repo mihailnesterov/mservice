@@ -10,6 +10,7 @@
 <p><?= $client_name ?></p>
 <p><?= $client_phone ?></p>
 <p><?= $client_email ?></p>
+<p><?= $client_address ?></p>
 <h3>Детали заказа № ms-<?= $order_id ?> от <?= $order_date ?></h3>
 <table>
     <tr>
