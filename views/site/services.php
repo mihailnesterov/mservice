@@ -220,9 +220,9 @@ use app\models\ServiceAlsoOrder;
                                                                 <div class="input-group">
                                                                     <div class="input-group-addon"><i class="fa fa-mobile fa-2x" aria-hidden="true"></i></div>
                                                                     <?php if ( $clientPhone != '' ): ?>
-                                                                        <input type="text" class="form-control input-lg" placeholder="Электронный адрес: *" name="client-phone" id="client-phone" value=<?= $clientPhone?> required />
+                                                                        <input type="text" class="form-control input-lg" placeholder="Контактный телефон *" name="client-phone" id="client-phone" value=<?= $clientPhone?> required />
                                                                     <?php else: ?>
-                                                                        <input type="text" class="form-control input-lg" placeholder="Электронный адрес: *" name="client-phone" id="client-phone" required />
+                                                                        <input type="text" class="form-control input-lg" placeholder="Контактный телефон *" name="client-phone" id="client-phone" required />
                                                                     <?php endif ?>
                                                                 </div>
                                                             </div>

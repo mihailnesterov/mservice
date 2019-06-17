@@ -758,6 +758,9 @@
                         sticky: false,
                         time: '3000'
                     });
+                // показать thank-you
+                $('#thank-you').removeClass('hidden');
+                // очистить поля формы
                 $('#order-complex-form :input').val('');
                 
                 return false;

@@ -101,15 +101,7 @@ use yii\widgets\ActiveForm;
                                                                     <?php endif ?>
                                                                 </div>
                                                         </div>
-                                                        <!--<div class="form-group">
-                                                            <div class="input-group">
-                                                                <div class="input-group-addon"><i class="fa fa-user fa-2x"></i></div>
-                                                                <?= $form->field($client, 'name')
-                                                                    ->textInput(['type' => 'text', 'class' => 'form-control input-lg', 'placeholder' => 'Ваше имя *', 'id' => 'client-name', 'value' => $clientName, 'required' => 'required'])
-                                                                    ->label('') ?>
-                                                            </div>
-                                                        </div>--> <!-- end form-group -->
-                                                        
+                                                                                                                
                                                         <div class="form-group">
                                                                 <div class="input-group">
                                                                     <div class="input-group-addon"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></div>
@@ -120,14 +112,7 @@ use yii\widgets\ActiveForm;
                                                                     <?php endif ?>
                                                                 </div>
                                                         </div>
-                                                        <!--<div class="form-group">
-                                                            <div class="input-group">
-                                                                <div class="input-group-addon"><i class="fa fa-envelope fa-2x"></i></div>
-                                                                <?= $form->field($client, 'email')
-                                                                    ->textInput(['type' => 'email', 'class' => 'form-control input-lg', 'placeholder' => 'Электронный адрес *', 'id' => 'client-email', 'value' => $clientEmail, 'required' => 'required'])
-                                                                    ->label('') ?>
-                                                            </div>
-                                                        </div>--> <!-- end form-group -->
+                                                        
                                                         <div class="form-group">
                                                                 <div class="input-group">
                                                                     <div class="input-group-addon"><i class="fa fa-mobile fa-2x" aria-hidden="true"></i></div>
@@ -138,14 +123,30 @@ use yii\widgets\ActiveForm;
                                                                     <?php endif ?>
                                                                 </div>
                                                         </div>
-                                                        <!--<div class="form-group">
+                                                        <div class="form-group hidden">
                                                             <div class="input-group">
-                                                                <div class="input-group-addon"><i class="fa fa-mobile fa-2x"></i></div>
-                                                                <?= $form->field($client, 'phone')
-                                                                    ->textInput(['type' => 'text', 'class' => 'form-control input-lg', 'placeholder' => 'Контактный телефон *', 'id' => 'client-phone', 'value' => $clientPhone, 'required' => 'required'])
-                                                                    ->label('') ?>
+                                                                <div class="input-group-addon"><i class="fa fa-address-card-o fa-2x" aria-hidden="true"></i></div>
+                                                                <input type="text" class="form-control input-lg" placeholder="Адрес регистрации проверяемого" name="reg-address" id="reg-address" />
                                                             </div>
-                                                        </div>--> <!-- end form-group -->
+                                                        </div>
+                                                        <div class="form-group hidden">
+                                                            <div class="input-group">
+                                                                <div class="input-group-addon"><i class="fa fa-user-plus fa-2x" aria-hidden="true"></i></div>
+                                                                <input type="text" class="form-control input-lg" placeholder="ФИО проверяемого" name="fio" id="fio" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group hidden">
+                                                            <div class="input-group">
+                                                                <div class="input-group-addon"><i class="fa fa-calendar-o fa-2x" aria-hidden="true"></i></div>
+                                                                <input type="text" class="form-control input-lg" placeholder="Дата рождения проверяемого" name="birthday" id="birthday" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group hidden">
+                                                            <div class="input-group">
+                                                                <div class="input-group-addon"><i class="fa fa-file-text-o fa-2x" aria-hidden="true"></i></div>
+                                                                <input type="text" class="form-control input-lg" placeholder="ИНН проверяемого" name="inn" id="inn" />
+                                                            </div>
+                                                        </div>
                                                     </div> <!-- end col -->
                                                     
                                                     <div class="submit-block col-sm-12 text-center">
