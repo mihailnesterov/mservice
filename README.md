@@ -1,3 +1,2 @@
 # Mservice
-Web-site for company Mservice
-yii2/jquery/ajax
+Service company web site with ordering web application. yii2/jquery/ajax/bootstrap3
